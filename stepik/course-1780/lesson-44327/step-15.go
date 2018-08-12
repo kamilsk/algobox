@@ -10,12 +10,12 @@ import (
 	"strings"
 )
 
-var update = flag.Bool("test", false, "use test input")
+var test = flag.Bool("test", false, "use test input")
 
 var testCases = `4 4 0
-0 4097
-4096 8193
-8192 12289
+0     4097
+4096  8193
+8192  12289
 12288 16385
 0
 4096
@@ -24,7 +24,7 @@ var testCases = `4 4 0
 
 func main() {
 	var input io.Reader = os.Stdin
-	if flag.Parse(); *update {
+	if flag.Parse(); *test {
 		input = strings.NewReader(testCases)
 	}
 	scan := bufio.NewScanner(input)
@@ -42,7 +42,6 @@ func main() {
 			value, _ := strconv.ParseUint(read(scan), 10, 64)
 			memory[paddr] = value
 		}
-
 		logical := make([]uint64, 0, q)
 		for i := 0; i < q; i++ {
 			addr, _ := strconv.ParseUint(read(scan), 10, 64)
@@ -50,10 +49,8 @@ func main() {
 		}
 
 		for i, addr := range logical {
-			var paddr uint64
 			pml4e, pdpte, pde, pte, offset := split(addr)
-
-			paddr = uint64(r)
+			paddr := uint64(r)
 			for _, row := range []uint16{pml4e, pdpte, pde, pte} {
 				paddr += uint64(row * 8)
 				val, ok := memory[paddr]

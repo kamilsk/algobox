@@ -10,7 +10,7 @@ import (
 	"strings"
 )
 
-var update = flag.Bool("test", false, "use test input")
+var test = flag.Bool("test", false, "use test input")
 
 var testCases = `3
 10 20 30
@@ -24,7 +24,7 @@ var testCases = `3
 
 func main() {
 	var input io.Reader = os.Stdin
-	if flag.Parse(); *update {
+	if flag.Parse(); *test {
 		input = strings.NewReader(testCases)
 	}
 	scan := bufio.NewScanner(input)
@@ -88,11 +88,14 @@ func search(where []int, what int) (nearest int) {
 	for start < end {
 		last := min(1<<power, end)
 		if what < where[last] {
-			l, b := lsearch(where[start:last+1], what), bsearch(where[start:last+1], what)
-			if l != b {
-				panic(fmt.Errorf("%d != %d : %+v.find(%d)\n", l, b, where, what))
+			if *test {
+				l, b := lsearch(where[start:last+1], what), bsearch(where[start:last+1], what)
+				if l != b {
+					panic(fmt.Errorf("%d != %d : %+v.find(%d)\n", l, b, where, what))
+				}
+				return start + b
 			}
-			return start + b
+			return start + bsearch(where[start:last+1], what)
 		}
 		power++
 		start = last

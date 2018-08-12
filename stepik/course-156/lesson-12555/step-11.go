@@ -11,13 +11,13 @@ import (
 	"strings"
 )
 
-var update = flag.Bool("test", false, "use test input")
+var test = flag.Bool("test", false, "use test input")
 
 var testCases = `75 2 109`
 
 func main() {
 	var input io.Reader = os.Stdin
-	if flag.Parse(); *update {
+	if flag.Parse(); *test {
 		input = strings.NewReader(testCases)
 	}
 	scan := bufio.NewScanner(input)
