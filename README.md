@@ -1,6 +1,6 @@
 > # algo
 >
-> 👨‍💻 My work is related to computer science courses on algorithms and data structures.
+> 👨‍💻 My progress in courses related to computer science, algorithms, and data structures.
 
 ## Courses
 
