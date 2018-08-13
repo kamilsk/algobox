@@ -20,7 +20,15 @@ var testCases = `4 4 0
 0
 4096
 42
-131313`
+131313
+-
+3 3 0
+0     8193
+8192  12289
+12288 1
+0
+4096
+42`
 
 func main() {
 	var input io.Reader = os.Stdin
