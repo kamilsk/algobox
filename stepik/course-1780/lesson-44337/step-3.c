@@ -3,13 +3,13 @@
 struct thread { int id; int cpu_usage; struct thread *next; };
 struct thread *newThread(int id);
 
-struct queue { int timeslice; struct thread *head, *tail; };
+struct queue { int timeslice; struct thread *head; };
 struct queue *newQueue(int timeslice);
 
 void enQueue(struct queue *q, struct thread *t);
 struct thread *deQueue(struct queue *q);
 struct thread *peek(struct queue *q);
-struct thread *find(struct queue *q, int thread_id);
+struct thread *eject(struct queue *q, int thread_id);
 
 struct queue *process;
 struct queue *blocked;
@@ -74,7 +74,7 @@ void block_thread()
  **/
 void wake_thread(int thread_id)
 {
-    enQueue(process, find(blocked, thread_id));
+    enQueue(process, eject(blocked, thread_id));
 }
 
 /**
@@ -121,7 +121,7 @@ struct thread *newThread(int id) {
 struct queue *newQueue(int timeslice) {
     struct queue *q = (struct queue*)malloc(sizeof(struct queue));
     q->timeslice = timeslice;
-    q->head = q->tail = NULL;
+    q->head = NULL;
     return q;
 }
 
@@ -131,12 +131,11 @@ void enQueue(struct queue *q, struct thread *t) {
     }
     t->cpu_usage = 0;
     t->next = NULL;
-    if (q->tail == NULL) {
-        q->head = q->tail = t;
-        return;
+    struct thread **indirect = &q->head;
+    while (*indirect != NULL) {
+        indirect = &(**indirect).next;
     }
-    q->tail->next = t;
-    q->tail = t;
+    *indirect = t;
 }
 
 struct thread *deQueue(struct queue *q) {
@@ -145,9 +144,6 @@ struct thread *deQueue(struct queue *q) {
     }
     struct thread *t = q->head;
     q->head = t->next;
-    if (q->head == NULL) {
-        q->tail = NULL;
-    }
     return t;
 }
 
@@ -155,26 +151,12 @@ struct thread *peek(struct queue *q) {
     return q->head;
 }
 
-struct thread *find(struct queue *q, int thread_id) {
-    struct thread *prev = NULL;
-    struct thread *next = peek(q);
-    while (next != NULL) {
-        if (next->id == thread_id) {
-            if (next == q->head) {
-                q->head = next->next;
-                if (q->head == NULL) {
-                    q->tail = NULL;
-                }
-            } else if (next == q->tail) {
-                q->tail = prev;
-                prev->next = NULL;
-            } else {
-                prev->next = next->next;
-            }
-            return next;
-        }
-        prev = next;
-        next = next->next;
+struct thread *eject(struct queue *q, int thread_id) {
+    struct thread **indirect = &q->head;
+    while ((**indirect).id != thread_id) {
+        indirect = &(**indirect).next;
     }
-    return NULL;
+    struct thread *found = *indirect;
+    *indirect = (*found).next;
+    return found;
 }
