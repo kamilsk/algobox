@@ -91,7 +91,7 @@ func search(where []int, what int) (nearest int) {
 			if *test {
 				l, b := lsearch(where[start:last+1], what), bsearch(where[start:last+1], what)
 				if l != b {
-					panic(fmt.Errorf("%d != %d : %+v.find(%d)\n", l, b, where, what))
+					panic(fmt.Errorf("%d != %d : %+v.find(%d)", l, b, where, what))
 				}
 				return start + b
 			}
