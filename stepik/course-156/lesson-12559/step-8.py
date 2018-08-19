@@ -18,18 +18,17 @@ def main():
         if not possible:
             print("IMPOSSIBLE")
         else:
+            buf = []
             while front:
-                cl = front.pop()
-                print(opening.get(cl), end='')
-            print(line, end='')
+                buf.append(opening.get(front.pop()))
+            buf.append(line)
             while back:
-                op = back.pop()
-                print(closing.get(op), end='')
-            print()
+                buf.append(closing.get(back.pop()))
+            print(''.join(buf))
 
 
 opening = {'}': '{', ']': '[', ')': '('}
-closing = {'{': '}', '[': ']', '(': ')'}
+closing = {v: k for k, v in opening.items()}
 
 if __name__ == "__main__":
     main()
