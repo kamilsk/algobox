@@ -37,3 +37,11 @@
 ![Условие задачи](lesson-44340/step-4.png)
 
 [Решение](lesson-44340/step-4.c)
+
+## 4.6 Deadlock-и и средства борьбы с ними
+
+### [Степ 14](https://stepik.org/lesson/44341/step/14)
+
+![Условие задачи](lesson-44341/step-14.png)
+
+[Решение](lesson-44341/step-14.c)
