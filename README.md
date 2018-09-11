@@ -29,3 +29,7 @@
 ##### [Алгоритмы и структуры данных](stepik/course-156)
 
 ##### [Операционные системы](stepik/course-1780)
+
+## Useful
+
+- [Sorting Algorithms Animations](https://www.toptal.com/developers/sorting-algorithms)
