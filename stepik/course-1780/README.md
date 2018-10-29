@@ -14,6 +14,16 @@
 
 [Решение](lesson-44328/step-9.c)
 
+## 2.7 SLAB аллокатор
+
+![Условие задачи](lesson-44330/step-6.png)
+
+[Решение](lesson-44330/step-6.c)
+
+Прочитанное:
+
+- [The Slab Allocator: An Object-Caching Kernel Memory Allocator](https://www.usenix.org/legacy/publications/library/proceedings/bos94/full_papers/bonwick.a)
+
 ## 3.4 Планирование и критерии планирования
 
 ### [Степ 5](https://stepik.org/lesson/44336/step/5)
