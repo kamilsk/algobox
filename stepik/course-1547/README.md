@@ -23,3 +23,15 @@
 </details>
 
 [Решение](lesson-41234/step-2/main.go), [тесты](lesson-41234/step-2/main_test.go).
+
+### [Степ 3](https://stepik.org/lesson/41234/step/3)
+
+<details>
+<summary><strong>Условие задачи</strong></summary>
+
+![Условие задачи, начало](lesson-41234/step-3/challenge-1.png)
+![Условие задачи, продолжение](lesson-41234/step-3/challenge-2.png)
+
+</details>
+
+[Решение](lesson-41234/step-3/main.go), [тесты](lesson-41234/step-3/main_test.go).
