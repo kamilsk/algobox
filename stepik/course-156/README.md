@@ -7,11 +7,11 @@
 <details>
 <summary><strong>Условие задачи</strong></summary>
 
-![Условие задачи](lesson-12555/step-11.png)
+![Условие задачи](lesson-12555/step-11/challenge.png)
 
 </details>
 
-[Решение](lesson-12555/step-11.go)
+[Решение](lesson-12555/step-11/main.go)
 
 ## 1.3 Массивы. Линейный и бинарный поиск. Амортизационный анализ
 
@@ -20,22 +20,22 @@
 <details>
 <summary><strong>Условие задачи</strong></summary>
 
-![Условие задачи](lesson-12556/step-3.png)
+![Условие задачи](lesson-12556/step-3/challenge.png)
 
 </details>
 
-[Решение](lesson-12556/step-3.go)
+[Решение](lesson-12556/step-3/main.go)
 
 ### [Степ 7](https://stepik.org/lesson/12556/step/7)
 
 <details>
 <summary><strong>Условие задачи</strong></summary>
 
-![Условие задачи](lesson-12556/step-7.png)
+![Условие задачи](lesson-12556/step-7/challenge.png)
 
 </details>
 
-[Решение](lesson-12556/step-7.go)
+[Решение](lesson-12556/step-7/main.go)
 
 ## 2.1 Списки. Очередь, стек, дек
 
@@ -44,22 +44,22 @@
 <details>
 <summary><strong>Условие задачи</strong></summary>
 
-![Условие задачи](lesson-12559/step-7.png)
+![Условие задачи](lesson-12559/step-7/challenge.png)
 
 </details>
 
-[Решение](lesson-12559/step-7.go)
+[Решение](lesson-12559/step-7/main.go)
 
 ### [Степ 8](https://stepik.org/lesson/12559/step/8)
 
 <details>
 <summary><strong>Условие задачи</strong></summary>
 
-![Условие задачи](lesson-12559/step-8.png)
+![Условие задачи](lesson-12559/step-8/challenge.png)
 
 </details>
 
-[Решение на Go](lesson-12559/step-8.go)<sup id="anchor-12559-8">[1](#12559-8)</sup>, [решение на Python](lesson-12559/step-8.py)
+[Решение на Go](lesson-12559/step-8/main.go)<sup id="anchor-12559-8">[1](#12559-8)</sup>, [решение на Python](lesson-12559/step-8/solution.py)
 
 <sup id="12559-8">1</sup> решение на Go не проходит `test #19`, но это же решение,
 переписанное на Python такой проблемы не имеет. [↩](#anchor-12559-8)
