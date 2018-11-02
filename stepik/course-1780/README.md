@@ -7,33 +7,33 @@
 <details>
 <summary><strong>Условие задачи</strong></summary>
 
-![Условие задачи](lesson-44327/step-15.png)
+![Условие задачи](lesson-44327/step-15/challenge.png)
 
 </details>
 
-[Решение](lesson-44327/step-15.go)
+[Решение](lesson-44327/step-15/main.go)
 
 ## 2.5 Простой подход к аллокации памяти
 
 <details>
 <summary><strong>Условие задачи</strong></summary>
 
-![Условие задачи](lesson-44328/step-9.png)
+![Условие задачи](lesson-44328/step-9/challenge.png)
 
 </details>
 
-[Решение](lesson-44328/step-9.c)
+[Решение](lesson-44328/step-9/solution.c)
 
 ## 2.7 SLAB аллокатор
 
 <details>
 <summary><strong>Условие задачи</strong></summary>
 
-![Условие задачи](lesson-44330/step-6.png)
+![Условие задачи](lesson-44330/step-6/challenge.png)
 
 </details>
 
-[Решение](lesson-44330/step-6.c)
+[Решение](lesson-44330/step-6/solution.c)
 
 Прочитанное:
 
@@ -46,11 +46,11 @@
 <details>
 <summary><strong>Условие задачи</strong></summary>
 
-![Условие задачи](lesson-44336/step-5.png)
+![Условие задачи](lesson-44336/step-5/challenge.png)
 
 </details>
 
-[Решение](lesson-44336/step-5.go)
+[Решение](lesson-44336/step-5/main.go)
 
 ## 3.5 Реалистичное планирование
 
@@ -59,11 +59,11 @@
 <details>
 <summary><strong>Условие задачи</strong></summary>
 
-![Условие задачи](lesson-44337/step-3.png)
+![Условие задачи](lesson-44337/step-3/challenge.png)
 
 </details>
 
-[Решение](lesson-44337/step-3.c)
+[Решение](lesson-44337/step-3/solution.c)
 
 ## 4.4 Взаимное исключение с использованием RMW регистров
 
@@ -72,11 +72,11 @@
 <details>
 <summary><strong>Условие задачи</strong></summary>
 
-![Условие задачи](lesson-44340/step-4.png)
+![Условие задачи](lesson-44340/step-4/challenge.png)
 
 </details>
 
-[Решение](lesson-44340/step-4.c)
+[Решение](lesson-44340/step-4/solution.c)
 
 ## 4.6 Deadlock-и и средства борьбы с ними
 
@@ -85,8 +85,8 @@
 <details>
 <summary><strong>Условие задачи</strong></summary>
 
-![Условие задачи](lesson-44341/step-14.png)
+![Условие задачи](lesson-44341/step-14/challenge.png)
 
 </details>
 
-[Решение](lesson-44341/step-14.c)
+[Решение](lesson-44341/step-14/solution.c)
