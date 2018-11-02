@@ -11,7 +11,7 @@
 
 </details>
 
-[Решение](lesson-12555/step-11/main.go)
+[Решение](lesson-12555/step-11/main.go), [тесты](lesson-12555/step-11/main_test.go)
 
 ## 1.3 Массивы. Линейный и бинарный поиск. Амортизационный анализ
 
@@ -24,7 +24,7 @@
 
 </details>
 
-[Решение](lesson-12556/step-3/main.go)
+[Решение](lesson-12556/step-3/main.go), [тесты](lesson-12556/step-3/main_test.go)
 
 ### [Степ 7](https://stepik.org/lesson/12556/step/7)
 
@@ -35,7 +35,7 @@
 
 </details>
 
-[Решение](lesson-12556/step-7/main.go)
+[Решение](lesson-12556/step-7/main.go), [тесты](lesson-12556/step-7/main_test.go)
 
 ## 2.1 Списки. Очередь, стек, дек
 
@@ -48,7 +48,7 @@
 
 </details>
 
-[Решение](lesson-12559/step-7/main.go)
+[Решение](lesson-12559/step-7/main.go), [тесты](lesson-12559/step-7/main_test.go)
 
 ### [Степ 8](https://stepik.org/lesson/12559/step/8)
 
@@ -59,7 +59,9 @@
 
 </details>
 
-[Решение на Go](lesson-12559/step-8/main.go)<sup id="anchor-12559-8">[1](#12559-8)</sup>, [решение на Python](lesson-12559/step-8/solution.py)
+[Решение на Go](lesson-12559/step-8/main.go)<sup id="anchor-12559-8">[1](#12559-8)</sup>,
+[тесты](lesson-12559/step-8/main_test.go),
+[решение на Python](lesson-12559/step-8/solution.py)
 
 <sup id="12559-8">1</sup> решение на Go не проходит `test #19`, но это же решение,
 переписанное на Python такой проблемы не имеет. [↩](#anchor-12559-8)
