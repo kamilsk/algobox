@@ -11,7 +11,7 @@
 
 </details>
 
-[Решение](lesson-44327/step-15/main.go)
+[Решение](lesson-44327/step-15/main.go), [тесты](lesson-44327/step-15/main_test.go)
 
 ## 2.5 Простой подход к аллокации памяти
 
@@ -50,7 +50,7 @@
 
 </details>
 
-[Решение](lesson-44336/step-5/main.go)
+[Решение](lesson-44336/step-5/main.go), [тесты](lesson-44336/step-5/main_test.go)
 
 ## 3.5 Реалистичное планирование
 
