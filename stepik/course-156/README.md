@@ -4,7 +4,12 @@
 
 ### [Степ 11](https://stepik.org/lesson/12555/step/11)
 
+<details>
+<summary><strong>Условие задачи</strong></summary>
+
 ![Условие задачи](lesson-12555/step-11.png)
+
+</details>
 
 [Решение](lesson-12555/step-11.go)
 
@@ -12,13 +17,23 @@
 
 ### [Степ 3](https://stepik.org/lesson/12556/step/3)
 
+<details>
+<summary><strong>Условие задачи</strong></summary>
+
 ![Условие задачи](lesson-12556/step-3.png)
+
+</details>
 
 [Решение](lesson-12556/step-3.go)
 
 ### [Степ 7](https://stepik.org/lesson/12556/step/7)
 
+<details>
+<summary><strong>Условие задачи</strong></summary>
+
 ![Условие задачи](lesson-12556/step-7.png)
+
+</details>
 
 [Решение](lesson-12556/step-7.go)
 
@@ -26,13 +41,23 @@
 
 ### [Степ 7](https://stepik.org/lesson/12559/step/7)
 
+<details>
+<summary><strong>Условие задачи</strong></summary>
+
 ![Условие задачи](lesson-12559/step-7.png)
+
+</details>
 
 [Решение](lesson-12559/step-7.go)
 
 ### [Степ 8](https://stepik.org/lesson/12559/step/8)
 
+<details>
+<summary><strong>Условие задачи</strong></summary>
+
 ![Условие задачи](lesson-12559/step-8.png)
+
+</details>
 
 [Решение на Go](lesson-12559/step-8.go), [решение на Python](lesson-12559/step-8.py)
 
