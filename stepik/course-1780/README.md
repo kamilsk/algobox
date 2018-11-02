@@ -4,19 +4,34 @@
 
 ### [Степ 15](https://stepik.org/lesson/44327/step/15)
 
+<details>
+<summary><strong>Условие задачи</strong></summary>
+
 ![Условие задачи](lesson-44327/step-15.png)
+
+</details>
 
 [Решение](lesson-44327/step-15.go)
 
 ## 2.5 Простой подход к аллокации памяти
 
+<details>
+<summary><strong>Условие задачи</strong></summary>
+
 ![Условие задачи](lesson-44328/step-9.png)
+
+</details>
 
 [Решение](lesson-44328/step-9.c)
 
 ## 2.7 SLAB аллокатор
 
+<details>
+<summary><strong>Условие задачи</strong></summary>
+
 ![Условие задачи](lesson-44330/step-6.png)
+
+</details>
 
 [Решение](lesson-44330/step-6.c)
 
@@ -28,7 +43,12 @@
 
 ### [Степ 5](https://stepik.org/lesson/44336/step/5)
 
+<details>
+<summary><strong>Условие задачи</strong></summary>
+
 ![Условие задачи](lesson-44336/step-5.png)
+
+</details>
 
 [Решение](lesson-44336/step-5.go)
 
@@ -36,7 +56,12 @@
 
 ### [Степ 3](https://stepik.org/lesson/44337/step/3)
 
+<details>
+<summary><strong>Условие задачи</strong></summary>
+
 ![Условие задачи](lesson-44337/step-3.png)
+
+</details>
 
 [Решение](lesson-44337/step-3.c)
 
@@ -44,7 +69,12 @@
 
 ### [Степ 4](https://stepik.org/lesson/44340/step/4)
 
+<details>
+<summary><strong>Условие задачи</strong></summary>
+
 ![Условие задачи](lesson-44340/step-4.png)
+
+</details>
 
 [Решение](lesson-44340/step-4.c)
 
@@ -52,6 +82,11 @@
 
 ### [Степ 14](https://stepik.org/lesson/44341/step/14)
 
+<details>
+<summary><strong>Условие задачи</strong></summary>
+
 ![Условие задачи](lesson-44341/step-14.png)
+
+</details>
 
 [Решение](lesson-44341/step-14.c)
