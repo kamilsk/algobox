@@ -31,40 +31,51 @@ func process(traffic [][2]int, capacity int) []int {
 		return nil
 	}
 
-	type packet struct {
-		start, end int
-		buffer     int
-	}
 	result := make([]int, 0, len(traffic))
-	flow := make([]packet, 0, len(traffic))
+	fl := &flow{cap: capacity}
 
 	for len(traffic) > 0 {
-		arrival, duration := traffic[0][0], traffic[0][1]
+		p := packet{arrival: traffic[0][0], duration: traffic[0][1]}
 		traffic = traffic[1:]
-
-		if len(flow) == 0 {
-			flow = append(flow, packet{arrival, arrival + duration, 1})
-			continue
-		}
-
-		head := flow[len(flow)-1]
-		if arrival >= head.end {
-			flow = append(flow, packet{arrival, arrival + duration, head.buffer})
-			continue
-		}
-
-		if head.buffer < capacity {
-			flow = append(flow, packet{head.end, head.end + duration, head.buffer + 1})
-			continue
-		}
-		flow = append(flow, packet{-1, head.end, head.buffer})
-	}
-
-	for len(flow) > 0 {
-		var tail packet
-		tail, flow = flow[0], flow[1:]
-		result = append(result, tail.start)
+		fl.push(&p)
+		result = append(result, p.start)
 	}
 
 	return result
+}
+
+type packet struct {
+	arrival, duration int
+	start, end        int
+	next              *packet
+}
+
+type flow struct {
+	cap, size int
+	head      *packet
+	tail      *packet
+}
+
+func (f *flow) push(p *packet) {
+	f.shrink(p.arrival)
+	if f.head == nil {
+		p.start, p.end = p.arrival, p.arrival+p.duration
+		f.head, f.tail = p, p
+		f.size++
+		return
+	}
+	if f.size < f.cap {
+		p.start, p.end = f.tail.end, f.tail.end+p.duration
+		f.tail.next, f.tail = p, p
+		f.size++
+		return
+	}
+	p.start, p.end = -1, f.tail.end
+}
+
+func (f *flow) shrink(arrival int) {
+	for f.head != nil && f.head.end <= arrival {
+		f.head = f.head.next
+		f.size--
+	}
 }
