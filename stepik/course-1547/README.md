@@ -46,3 +46,14 @@
 </details>
 
 [Решение](lesson-41234/step-4/main.go), [тесты](lesson-41234/step-4/main_test.go).
+
+### [Степ 5](https://stepik.org/lesson/41234/step/5)
+
+<details>
+<summary><strong>Условие задачи</strong></summary>
+
+![Условие задачи](lesson-41234/step-5/challenge.png)
+
+</details>
+
+[Решение](lesson-41234/step-5/main.go), [тесты](lesson-41234/step-5/main_test.go).
