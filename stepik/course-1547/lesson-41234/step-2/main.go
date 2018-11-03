@@ -11,9 +11,9 @@ func main() {
 	scanner := bufio.NewScanner(os.Stdin)
 	scanner.Split(bufio.ScanWords)
 	_ = scanner.Scan()
-	count, _ := strconv.Atoi(scanner.Text())
-	parents := make([]int, 0, count)
-	for i := 0; scanner.Scan() && i < count; i++ {
+	n, _ := strconv.Atoi(scanner.Text())
+	parents := make([]int, 0, n)
+	for i := 0; i < n && scanner.Scan(); i++ {
 		parent, _ := strconv.Atoi(scanner.Text())
 		parents = append(parents, parent)
 	}

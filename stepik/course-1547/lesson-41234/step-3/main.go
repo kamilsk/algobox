@@ -13,9 +13,9 @@ func main() {
 	_ = scanner.Scan()
 	size, _ := strconv.Atoi(scanner.Text())
 	_ = scanner.Scan()
-	count, _ := strconv.Atoi(scanner.Text())
-	traffic := make([][2]int, 0, count)
-	for i := 0; scanner.Scan() && i < count; i++ {
+	n, _ := strconv.Atoi(scanner.Text())
+	traffic := make([][2]int, 0, n)
+	for i := 0; i < n && scanner.Scan(); i++ {
 		arrival, _ := strconv.Atoi(scanner.Text())
 		_ = scanner.Scan()
 		duration, _ := strconv.Atoi(scanner.Text())

@@ -18,17 +18,17 @@ func main() {
 	scanner := bufio.NewScanner(os.Stdin)
 	scanner.Split(bufio.ScanLines)
 	_ = scanner.Scan()
-	count, _ := strconv.Atoi(scanner.Text())
-	commands := make([]string, 0, count)
-	for i := 0; scanner.Scan() && i < count; i++ {
+	n, _ := strconv.Atoi(scanner.Text())
+	commands := make([]string, 0, n)
+	for i := 0; i < n && scanner.Scan(); i++ {
 		commands = append(commands, scanner.Text())
 	}
-	for _, max := range New(count).process(commands) {
+	for _, max := range New(n).process(commands) {
 		fmt.Println(max)
 	}
 }
 
-// New returns new instance of stack with maximums.
+// New returns a new instance of stack with maximums.
 func New(capacity int) *stack {
 	return &stack{data: make([]int, 0, capacity), max: make([]int, 0, capacity)}
 }
