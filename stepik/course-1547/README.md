@@ -57,3 +57,17 @@
 </details>
 
 [Решение](lesson-41234/step-5/main.go), [тесты](lesson-41234/step-5/main_test.go).
+
+## 2. Очереди с приоритетами
+
+### [Степ 1](https://stepik.org/lesson/41560/step/1)
+
+<details>
+<summary><strong>Условие задачи</strong></summary>
+
+![Условие задачи, начало](lesson-41560/step-1/challenge-1.png)
+![Условие задачи, продолжение](lesson-41560/step-1/challenge-2.png)
+
+</details>
+
+[Решение](lesson-41560/step-1/main.go), [тесты](lesson-41560/step-1/main_test.go).

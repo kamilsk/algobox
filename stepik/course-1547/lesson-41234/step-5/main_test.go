@@ -5,7 +5,11 @@ import (
 	"testing"
 )
 
-func TestMaximumsInSlidingWindow(t *testing.T) {
+var format = `
+expected %+v
+obtained %+v`
+
+func TestWindow(t *testing.T) {
 	tests := []struct {
 		name     string
 		numbers  []int
@@ -21,7 +25,7 @@ func TestMaximumsInSlidingWindow(t *testing.T) {
 		tc := test
 		t.Run(test.name, func(t *testing.T) {
 			if obtained := New(tc.window).calculate(tc.numbers); !reflect.DeepEqual(tc.expected, obtained) {
-				t.Errorf("expected %+v, obtained %+v", tc.expected, obtained)
+				t.Errorf(format, tc.expected, obtained)
 			}
 		})
 	}
