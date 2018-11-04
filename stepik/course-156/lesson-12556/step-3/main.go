@@ -2,49 +2,34 @@ package main
 
 import (
 	"bufio"
-	"flag"
 	"fmt"
-	"io"
 	"os"
 	"strconv"
-	"strings"
 )
 
-var test = flag.Bool("test", false, "use test input")
-
-var testCases = `4
- 4  -8 6 0
--10  3 1 1
-
-6
-1 1  39 40 1 1
-1 30 29 1  1 1`
-
 func main() {
-	var input io.Reader = os.Stdin
-	if flag.Parse(); *test {
-		input = strings.NewReader(testCases)
+	scanner := bufio.NewScanner(os.Stdin)
+	scanner.Split(bufio.ScanWords)
+	_ = scanner.Scan()
+	n, _ := strconv.Atoi(scanner.Text())
+	total := 2 * n
+	input := make([]int, total)
+	for i := 0; i < total && scanner.Scan(); i++ {
+		input[i], _ = strconv.Atoi(scanner.Text())
 	}
-	scan := bufio.NewScanner(input)
-	scan.Split(bufio.ScanWords)
-	for scan.Scan() {
-		size, _ := strconv.Atoi(scan.Text())
-		in := make([]int, 2*size)
-		for i, limit := 0, 2*size; i < limit; i++ {
-			scan.Scan()
-			in[i], _ = strconv.Atoi(scan.Text())
+	fmt.Println(compare(input[:n], input[n:]))
+}
+
+func compare(first []int, second []int) (i0, j0 int) {
+	// assert(len(first) == len(second))
+	maxI, maxSum := i0, first[i0]+second[j0]
+	for i, size := 0, len(first); i < size; i++ {
+		if first[i] > first[maxI] {
+			maxI = i
 		}
-		first, second := in[:size], in[size:]
-		maxI, maxJ := 0, 0
-		maxF, maxSum := maxI, first[maxI]+second[maxJ]
-		for j := 0; j < size; j++ {
-			if first[j] > first[maxF] {
-				maxF = j
-			}
-			if sum := first[maxF] + second[j]; sum > maxSum {
-				maxI, maxJ, maxSum = maxF, j, sum
-			}
+		if sum := first[maxI] + second[i]; sum > maxSum {
+			i0, j0, maxSum = maxI, i, sum
 		}
-		fmt.Println(maxI, maxJ)
 	}
+	return i0, j0
 }
