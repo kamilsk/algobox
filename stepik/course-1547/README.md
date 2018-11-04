@@ -71,3 +71,14 @@
 </details>
 
 [Решение](lesson-41560/step-1/main.go), [тесты](lesson-41560/step-1/main_test.go).
+
+### [Степ 2](https://stepik.org/lesson/41560/step/2)
+
+<details>
+<summary><strong>Условие задачи</strong></summary>
+
+![Условие задачи](lesson-41560/step-2/challenge.png)
+
+</details>
+
+[Решение](lesson-41560/step-2/main.go), [тесты](lesson-41560/step-2/main_test.go).

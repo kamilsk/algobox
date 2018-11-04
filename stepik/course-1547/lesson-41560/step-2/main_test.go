@@ -1,17 +1,57 @@
 package main
 
-import "testing"
+import (
+	"reflect"
+	"testing"
+)
 
-func Test(t *testing.T) {
+var format = `
+expected %+v
+obtained %+v`
+
+func TestScheduler(t *testing.T) {
 	tests := []struct {
-		name string
+		name     string
+		cpus     int
+		tasks    []int
+		expected [][]string
 	}{
-		{},
+		{"case#01", 2, []int{1, 2, 3, 4, 5}, [][]string{
+			{"0", "0"},
+			{"1", "0"},
+			{"0", "1"},
+			{"1", "2"},
+			{"0", "4"},
+		}},
+		{"case#02", 4, []int{1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1}, [][]string{
+			{"0", "0"},
+			{"1", "0"},
+			{"2", "0"},
+			{"3", "0"},
+			{"0", "1"},
+			{"1", "1"},
+			{"2", "1"},
+			{"3", "1"},
+			{"0", "2"},
+			{"1", "2"},
+			{"2", "2"},
+			{"3", "2"},
+			{"0", "3"},
+			{"1", "3"},
+			{"2", "3"},
+			{"3", "3"},
+			{"0", "4"},
+			{"1", "4"},
+			{"2", "4"},
+			{"3", "4"},
+		}},
 	}
 	for _, test := range tests {
 		tc := test
 		t.Run(test.name, func(t *testing.T) {
-			t.Log(tc.name)
+			if obtained := (&scheduler{tc.cpus}).schedule(tc.tasks); !reflect.DeepEqual(tc.expected, obtained) {
+				t.Errorf(format, tc.expected, obtained)
+			}
 		})
 	}
 }
