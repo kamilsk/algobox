@@ -2,127 +2,89 @@ package main
 
 import (
 	"bufio"
-	"flag"
 	"fmt"
-	"io"
 	"os"
 	"strconv"
-	"strings"
 )
-
-var test = flag.Bool("test", false, "use test input")
-
-var testCases = `5
-1 44
-3 50
-2 44
-2 50
-2 -1
-
-7
-4 44
-4 -1
-3 22
-4 22
-2 -1
-1 11
-4 11`
 
 func main() {
-	var input io.Reader = os.Stdin
-	if flag.Parse(); *test {
-		input = strings.NewReader(testCases)
-	}
-	scan := bufio.NewScanner(input)
-	scan.Split(bufio.ScanWords)
-
-	stepik := true // hack for stepik.org because it provides invalid input at test #6
-
-	for stepik && scan.Scan() {
-		size, _ := strconv.Atoi(scan.Text())
-		success := new(bool)
-		for i, deq := 0, new(DEQ); i < size; i++ {
-			operation, element := read(scan)
-			switch operation {
-			case PushFront:
-				deq.enqueue(element)
-			case PopFront:
-				*success = deq.assert(deq.dequeue, element)
-				if !*success {
-					rewind(scan, size-i)
-					i = size
-				}
-			case PushBack:
-				deq.push(element)
-			case PopBack:
-				*success = deq.assert(deq.pop, element)
-				if !*success {
-					rewind(scan, size-i)
-					i = size
-				}
-			}
-		}
-		stepik = *test
-		if success != nil {
-			if *success {
-				fmt.Println("YES")
-				continue
-			}
+	scanner := bufio.NewScanner(os.Stdin)
+	scanner.Split(bufio.ScanWords)
+	_ = scanner.Scan()
+	n, _ := strconv.Atoi(scanner.Text())
+	for i, d := 0, new(deq); i < n && scanner.Scan(); i++ {
+		code, _ := strconv.Atoi(scanner.Text())
+		_ = scanner.Scan()
+		arg, _ := strconv.Atoi(scanner.Text())
+		if !d.do(code, arg) {
 			fmt.Println("NO")
+			return
 		}
 	}
+	fmt.Println("YES")
 }
 
-// Operations above the DEQ.
 const (
-	PushFront = 1 + iota
-	PopFront
-	PushBack
-	PopBack
+	pushFront = 1 + iota
+	popFront
+	pushBack
+	popBack
 )
 
-func read(scan *bufio.Scanner) (int, int) {
-	scan.Scan()
-	first, _ := strconv.Atoi(scan.Text())
-	scan.Scan()
-	second, _ := strconv.Atoi(scan.Text())
-	return first, second
-}
+type deq []int
 
-func rewind(scan *bufio.Scanner, count int) {
-	for i := 0; i < count; i++ {
-		_, _ = read(scan)
-	}
-}
-
-// DEQ is a double-ended queue based on slice.
-type DEQ []int
-
-func (d *DEQ) assert(operation func() int, expected int) bool {
+func (deq *deq) assert(operation func() int, expected int) bool {
 	return operation() == expected
 }
 
-func (d *DEQ) enqueue(element int) {
-	*d = append([]int{element}, *d...)
+func (deq *deq) enqueue(element int) {
+	*deq = append([]int{element}, *deq...)
 }
 
-func (d *DEQ) dequeue() (element int) {
-	if len(*d) == 0 {
+func (deq *deq) dequeue() (element int) {
+	if len(*deq) == 0 {
 		return -1
 	}
-	element, *d = (*d)[0], (*d)[1:]
+	element, *deq = (*deq)[0], (*deq)[1:]
 	return
 }
 
-func (d *DEQ) push(element int) {
-	*d = append(*d, element)
+func (deq *deq) push(element int) {
+	*deq = append(*deq, element)
 }
 
-func (d *DEQ) pop() (element int) {
-	last := len(*d) - 1
+func (deq *deq) pop() (element int) {
+	last := len(*deq) - 1
 	if last < 0 {
 		return -1
 	}
-	element, *d = (*d)[last], (*d)[:last]
+	element, *deq = (*deq)[last], (*deq)[:last]
 	return
+}
+
+func (deq *deq) do(code, arg int) bool {
+	switch code {
+	case pushFront:
+		deq.enqueue(arg)
+	case popFront:
+		if !deq.assert(deq.dequeue, arg) {
+			return false
+		}
+	case pushBack:
+		deq.push(arg)
+	case popBack:
+		if !deq.assert(deq.pop, arg) {
+			return false
+		}
+	}
+	return true
+}
+
+func (deq *deq) process(operations [][2]int) bool {
+	for _, operation := range operations {
+		if !deq.do(operation[0], operation[1]) {
+			return false
+		}
+	}
+	return true
 }
