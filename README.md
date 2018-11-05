@@ -6,6 +6,8 @@
 
 ### [HackerRank](https://www.hackerrank.com/kamilsk)
 
+#### [30 Days of Code](hackerrank/30-days-of-code)
+
 #### [Problem Solving](hackerrank/algorithms)
 
 ## Courses
