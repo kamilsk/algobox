@@ -30,10 +30,68 @@ type scheduler struct {
 }
 
 func (scheduler *scheduler) schedule(tasks []int) [][]string {
-	return nil
+	system := heap{bus: make([]cpu, scheduler.cpus)}
+	for i := 0; i < scheduler.cpus; i++ {
+		system.bus[i].id = i
+	}
+	result := make([][]string, 0, len(tasks))
+	for len(tasks) > 0 {
+		result, tasks = append(result, system.run(tasks[0])), tasks[1:]
+	}
+	return result
 }
 
 func (scheduler *scheduler) with(cpus int) *scheduler {
 	scheduler.cpus = cpus
 	return scheduler
+}
+
+type cpu struct {
+	id    int
+	timer int
+}
+
+type heap struct {
+	bus []cpu
+}
+
+func (heap *heap) run(duration int) []string {
+	current := heap.bus[0]
+	heap.bus[0].timer += duration
+	siftDown(heap.bus, 0)
+	return []string{strconv.Itoa(current.id), strconv.Itoa(current.timer)}
+}
+
+func siftDown(data []cpu, i int) {
+	min := i
+	l := left(i)
+	if l < len(data) {
+		if data[l].timer == data[min].timer && data[l].id < data[min].id {
+			min = l
+		}
+		if data[l].timer < data[min].timer {
+			min = l
+		}
+	}
+	r := right(i)
+	if r < len(data) {
+		if data[r].timer == data[min].timer && data[r].id < data[min].id {
+			min = r
+		}
+		if data[r].timer < data[min].timer {
+			min = r
+		}
+	}
+	if i != min {
+		data[i], data[min] = data[min], data[i]
+		siftDown(data, min)
+	}
+}
+
+func left(i int) int {
+	return 2*i + 1
+}
+
+func right(i int) int {
+	return 2 * (i + 1)
 }

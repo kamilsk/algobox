@@ -62,7 +62,7 @@ func search(where []int, what []int) []string {
 			power++
 			start = last
 		}
-		result = append(result, strconv.FormatInt(int64(end), 10))
+		result = append(result, strconv.Itoa(end))
 		what = what[1:]
 	}
 	return result

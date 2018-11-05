@@ -40,20 +40,20 @@ func (heap *heap) build(numbers []int) [][]string {
 }
 
 func (heap *heap) siftDown(i int) [][]string {
-	max := i
+	min := i
 	l := left(i)
-	if l < len(heap.data) && heap.data[l] < heap.data[max] {
-		max = l
+	if l < len(heap.data) && heap.data[l] < heap.data[min] {
+		min = l
 	}
 	r := right(i)
-	if r < len(heap.data) && heap.data[r] < heap.data[max] {
-		max = r
+	if r < len(heap.data) && heap.data[r] < heap.data[min] {
+		min = r
 	}
-	if i != max {
-		heap.data[i], heap.data[max] = heap.data[max], heap.data[i]
+	if i != min {
+		heap.data[i], heap.data[min] = heap.data[min], heap.data[i]
 		swap := make([][]string, 0, 4)
-		swap = append(swap, []string{strconv.FormatInt(int64(i), 10), strconv.FormatInt(int64(max), 10)})
-		return append(swap, heap.siftDown(max)...)
+		swap = append(swap, []string{strconv.Itoa(i), strconv.Itoa(min)})
+		return append(swap, heap.siftDown(min)...)
 	}
 	return nil
 }

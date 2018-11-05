@@ -50,7 +50,7 @@ func (window *window) calculate(numbers []int) []string {
 	// optimization for the edge case
 	if window.size == 1 {
 		for _, num := range numbers {
-			result = append(result, strconv.FormatInt(int64(num), 10))
+			result = append(result, strconv.Itoa(num))
 		}
 		return result
 	}
@@ -74,7 +74,7 @@ func (window *window) calculate(numbers []int) []string {
 			if foundIn && maxIn > max {
 				max = maxIn
 			}
-			result = append(result, strconv.FormatInt(int64(max), 10))
+			result = append(result, strconv.Itoa(max))
 			_, _ = window.out.pop()
 
 			if len(numbers) == 0 {
