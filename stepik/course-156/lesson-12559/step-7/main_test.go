@@ -29,7 +29,7 @@ func TestDEQ(t *testing.T) {
 		tc := test
 		t.Run(test.name, func(t *testing.T) {
 			if obtained := new(deq).process(tc.operations); tc.expected != obtained {
-				t.Errorf("expected: %v; obtained: %v", tc.expected, obtained)
+				t.Errorf("expected %v, obtained %v", tc.expected, obtained)
 			}
 		})
 	}

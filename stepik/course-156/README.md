@@ -59,11 +59,9 @@
 
 </details>
 
-[Решение на Go](lesson-12559/step-8/main.go)<sup id="anchor-12559-8">[1](#12559-8)</sup>,
-[тесты](lesson-12559/step-8/main_test.go),
-[решение на Python](lesson-12559/step-8/solution.py).
+[Решение](lesson-12559/step-8/main.go)<sup id="a-12559-8">[1](#12559-8)</sup>, [тесты](lesson-12559/step-8/main_test.go).
 
 ---
 
-<sup id="12559-8">1</sup> решение на Go не проходит `test #19`, но это же решение,
-переписанное на Python такой проблемы не имеет. [↩](#anchor-12559-8)
+<sup id="12559-8">1</sup> решение на Go не проходит `test #19`, но это же [решение](lesson-12559/step-8/solution.py),
+переписанное на Python, такой проблемы не имеет. [↩](#a-12559-8)
