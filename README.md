@@ -2,9 +2,15 @@
 >
 > 👨‍💻 My progress in courses related to computer science, algorithms, and data structures.
 
+## Challenges
+
+### [HackerRank](https://www.hackerrank.com/kamilsk)
+
+#### [Problem Solving](hackerrank/algorithms)
+
 ## Courses
 
-### Coursera
+### [Coursera](https://www.coursera.org/user/ac851392243e4a64c5a04b6bfe2b97cc)
 
 #### Data Structures and Algorithms
 
@@ -20,7 +26,7 @@
 
 ##### Genome Assembly Programming Challenge
 
-### Stepik
+### [Stepik](https://stepik.org/users/17586168)
 
 ##### Алгоритмы: теория и практика. Методы
 
@@ -32,4 +38,5 @@
 
 ## Useful
 
+- [Algojammer](https://github.com/ChrisKnott/Algojammer)
 - [Sorting Algorithms Animations](https://www.toptal.com/developers/sorting-algorithms)
