@@ -61,6 +61,19 @@
 
 [Решение](lesson-12559/step-8/main.go)<sup id="a-12559-8">[1](#12559-8)</sup>, [тесты](lesson-12559/step-8/main_test.go).
 
+## 2.2 Двоичная куча. Очередь с приоритетом
+
+### [Степ 7](https://stepik.org/lesson/12560/step/7)
+
+<details>
+<summary><strong>Условие задачи</strong></summary>
+
+![Условие задачи](lesson-12560/step-7/challenge.png)
+
+</details>
+
+[Решение](lesson-12560/step-7/main.go), [тесты](lesson-12560/step-7/main_test.go).
+
 ---
 
 <sup id="12559-8">1</sup> решение на Go не проходит `test #19`, но это же [решение](lesson-12559/step-8/solution.py),

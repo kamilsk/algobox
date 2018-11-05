@@ -58,7 +58,7 @@
 
 [Решение](lesson-41234/step-5/main.go), [тесты](lesson-41234/step-5/main_test.go).
 
-## 2. Очереди с приоритетами
+## 2. Очереди с приоритетом
 
 ### [Степ 1](https://stepik.org/lesson/41560/step/1)
 
