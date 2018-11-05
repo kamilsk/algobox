@@ -20,8 +20,7 @@ func main() {
 		duration, _ := strconv.Atoi(scanner.Text())
 		tasks = append(tasks, duration)
 	}
-	plan := (&scheduler{n}).schedule(tasks)
-	for _, process := range plan {
+	for _, process := range new(scheduler).with(n).schedule(tasks) {
 		fmt.Println(strings.Join(process, " "))
 	}
 }
@@ -32,4 +31,9 @@ type scheduler struct {
 
 func (scheduler *scheduler) schedule(tasks []int) [][]string {
 	return nil
+}
+
+func (scheduler *scheduler) with(cpus int) *scheduler {
+	scheduler.cpus = cpus
+	return scheduler
 }

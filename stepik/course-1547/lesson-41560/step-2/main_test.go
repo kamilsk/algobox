@@ -49,7 +49,7 @@ func TestScheduler(t *testing.T) {
 	for _, test := range tests {
 		tc := test
 		t.Run(test.name, func(t *testing.T) {
-			if obtained := (&scheduler{tc.cpus}).schedule(tc.tasks); !reflect.DeepEqual(tc.expected, obtained) {
+			if obtained := new(scheduler).with(tc.cpus).schedule(tc.tasks); !reflect.DeepEqual(tc.expected, obtained) {
 				t.Errorf(format, tc.expected, obtained)
 			}
 		})

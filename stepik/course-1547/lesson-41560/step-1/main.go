@@ -18,7 +18,7 @@ func main() {
 		num, _ := strconv.Atoi(scanner.Text())
 		numbers = append(numbers, num)
 	}
-	swaps := (&heap{}).build(numbers)
+	swaps := new(heap).build(numbers)
 	fmt.Println(len(swaps))
 	for _, swap := range swaps {
 		fmt.Println(strings.Join(swap, " "))

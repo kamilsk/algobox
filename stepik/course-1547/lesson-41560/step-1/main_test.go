@@ -23,7 +23,7 @@ func TestHeap(t *testing.T) {
 	for _, test := range tests {
 		tc := test
 		t.Run(test.name, func(t *testing.T) {
-			if obtained := (&heap{}).build(tc.numbers); !reflect.DeepEqual(tc.expected, obtained) {
+			if obtained := new(heap).build(tc.numbers); !reflect.DeepEqual(tc.expected, obtained) {
 				t.Errorf(format, tc.expected, obtained)
 			}
 		})
