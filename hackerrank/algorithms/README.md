@@ -29,3 +29,7 @@
 ### [Staircase](https://www.hackerrank.com/challenges/staircase/problem)
 
 [Solution](easy/staircase/main.go).
+
+### [Mini-Max Sum](https://www.hackerrank.com/challenges/mini-max-sum/problem)
+
+[Solution](easy/mini-max-sum/main.go).
