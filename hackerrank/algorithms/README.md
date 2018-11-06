@@ -13,3 +13,7 @@
 ### [Compare the Triplets](https://www.hackerrank.com/challenges/compare-the-triplets/problem)
 
 [Solution](easy/compare-the-triplets/main.go), [tests](easy/compare-the-triplets/main_test.go).
+
+### [A Very Big Sum](https://www.hackerrank.com/challenges/a-very-big-sum/problem)
+
+[Solution](easy/a-very-big-sum/main.go), [tests](easy/a-very-big-sum/main_test.go).
