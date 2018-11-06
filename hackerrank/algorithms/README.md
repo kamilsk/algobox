@@ -37,3 +37,7 @@
 ### [Birthday Cake Candles](https://www.hackerrank.com/challenges/birthday-cake-candles/problem)
 
 [Solution](easy/birthday-cake-candles/main.go), [tests](easy/birthday-cake-candles/main_test.go).
+
+### [Time Conversion](https://www.hackerrank.com/challenges/time-conversion/problem)
+
+[Solution](), [tests]().
