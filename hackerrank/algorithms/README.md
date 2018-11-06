@@ -40,4 +40,4 @@
 
 ### [Time Conversion](https://www.hackerrank.com/challenges/time-conversion/problem)
 
-[Solution](), [tests]().
+[Solution](easy/time-conversion/main.go), [tests](easy/time-conversion/main_test.go).
