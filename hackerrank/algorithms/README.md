@@ -21,3 +21,7 @@
 ### [Diagonal Difference](https://www.hackerrank.com/challenges/diagonal-difference/problem)
 
 [Solution](easy/diagonal-difference/main.go), [tests](easy/diagonal-difference/main_test.go).
+
+### [Plus Minus](https://www.hackerrank.com/challenges/plus-minus/problem)
+
+[Solution](easy/plus-minus/main.go).
