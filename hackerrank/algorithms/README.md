@@ -9,3 +9,7 @@
 ### [Simple Array Sum](https://www.hackerrank.com/challenges/simple-array-sum/problem)
 
 [Solution](easy/simple-array-sum/main.go), [tests](easy/simple-array-sum/main_test.go).
+
+### [Compare the Triplets](https://www.hackerrank.com/challenges/compare-the-triplets/problem)
+
+[Solution](easy/compare-the-triplets/main.go), [tests](easy/compare-the-triplets/main_test.go).
