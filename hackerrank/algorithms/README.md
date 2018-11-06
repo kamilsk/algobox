@@ -17,3 +17,7 @@
 ### [A Very Big Sum](https://www.hackerrank.com/challenges/a-very-big-sum/problem)
 
 [Solution](easy/a-very-big-sum/main.go), [tests](easy/a-very-big-sum/main_test.go).
+
+### [Diagonal Difference](https://www.hackerrank.com/challenges/diagonal-difference/problem)
+
+[Solution](easy/diagonal-difference/main.go), [tests](easy/diagonal-difference/main_test.go).
