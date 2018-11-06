@@ -45,15 +45,16 @@ func (basket *basket) empty() bool {
 }
 
 func (basket *basket) sort() *basket {
-	// build heap
+	// build min heap
 	for i := len(basket.fruit) / 2; i >= 0; i-- {
 		siftDown(basket.fruit, i)
 	}
-	// heap sort
-	process := basket.fruit[1:]
-	for len(process) > 0 {
+	// sort by min heap
+	process := basket.fruit
+	for last := len(basket.fruit) - 1; last > 0; last-- {
+		process[0], process[last] = process[last], process[0]
+		process = process[:last]
 		siftDown(process, 0)
-		process = process[1:]
 	}
 	// remove stumps
 	for i := len(basket.fruit) - 1; i >= 0; i-- {
@@ -96,6 +97,7 @@ func (greedy greedy) eat() int {
 		steps++
 		portion, w := make([]weight, 0, 4), weight(0)
 		for w < greedy.force {
+			// assert(f <= greedy.force)
 			f := greedy.basket.take()
 			if f == 0 {
 				break
@@ -113,7 +115,7 @@ func (greedy greedy) eat() int {
 				portion[i] = 0
 				continue
 			}
-			portion[i] = weight(0.5 + (float32(portion[i]) / 2))
+			portion[i] /= 2
 		}
 		greedy.basket.back(portion...)
 	}
@@ -121,18 +123,18 @@ func (greedy greedy) eat() int {
 }
 
 func siftDown(data []weight, i int) {
-	max := i
+	min := i
 	l := left(i)
-	if l < len(data) && data[l] > data[max] {
-		max = l
+	if l < len(data) && data[l] < data[min] {
+		min = l
 	}
 	r := right(i)
-	if r < len(data) && data[r] > data[max] {
-		max = r
+	if r < len(data) && data[r] < data[min] {
+		min = r
 	}
-	if i != max {
-		data[i], data[max] = data[max], data[i]
-		siftDown(data, max)
+	if i != min {
+		data[i], data[min] = data[min], data[i]
+		siftDown(data, min)
 	}
 }
 
