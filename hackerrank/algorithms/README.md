@@ -33,3 +33,7 @@
 ### [Mini-Max Sum](https://www.hackerrank.com/challenges/mini-max-sum/problem)
 
 [Solution](easy/mini-max-sum/main.go).
+
+### [Birthday Cake Candles](https://www.hackerrank.com/challenges/birthday-cake-candles/problem)
+
+[Solution](easy/birthday-cake-candles/main.go), [tests](easy/birthday-cake-candles/main_test.go).
