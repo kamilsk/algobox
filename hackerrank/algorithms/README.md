@@ -25,3 +25,7 @@
 ### [Plus Minus](https://www.hackerrank.com/challenges/plus-minus/problem)
 
 [Solution](easy/plus-minus/main.go).
+
+### [Staircase](https://www.hackerrank.com/challenges/staircase/problem)
+
+[Solution](easy/staircase/main.go).
