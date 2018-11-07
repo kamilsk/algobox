@@ -49,3 +49,7 @@
 ### [Apple and Orange](https://www.hackerrank.com/challenges/apple-and-orange/problem)
 
 [Solution](easy/apple-and-orange/main.go).
+
+### [Kangaroo](https://www.hackerrank.com/challenges/kangaroo/problem)
+
+[Solution](easy/kangaroo/main.go), [tests](easy/kangaroo/main_test.go).
