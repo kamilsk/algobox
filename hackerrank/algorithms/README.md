@@ -45,3 +45,7 @@
 ### [Grading Students](https://www.hackerrank.com/challenges/grading/problem)
 
 [Solution](easy/grading/main.go), [tests](easy/grading/main_test.go).
+
+### [Apple and Orange](https://www.hackerrank.com/challenges/apple-and-orange/problem)
+
+[Solution](easy/apple-and-orange/main.go).
