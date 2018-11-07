@@ -5,7 +5,7 @@ import (
 	"testing"
 )
 
-var format = `
+const format = `
 expected %+v
 obtained %+v`
 

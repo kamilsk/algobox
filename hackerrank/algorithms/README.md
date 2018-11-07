@@ -41,3 +41,7 @@
 ### [Time Conversion](https://www.hackerrank.com/challenges/time-conversion/problem)
 
 [Solution](easy/time-conversion/main.go), [tests](easy/time-conversion/main_test.go).
+
+### [Grading Students](https://www.hackerrank.com/challenges/grading/problem)
+
+[Solution](easy/grading/main.go), [tests](easy/grading/main_test.go).
