@@ -11,7 +11,7 @@ import (
 func main() {
 	scanner := bufio.NewScanner(os.Stdin)
 	scanner.Split(bufio.ScanWords)
-	nn := make([]int, 0, 2048)
+	nn := make([]int, 0, 512)
 	for scanner.Scan() {
 		n, _ := strconv.Atoi(scanner.Text())
 		nn = append(nn, n)
@@ -19,18 +19,33 @@ func main() {
 	fmt.Println(strings.Join(convert(insertion(nn)), " "))
 }
 
-func insertion(array []int) []int {
-	if len(array) < 2 {
-		return array
+func selection(array []int) []int {
+	for i, size := 0, len(array); i < size-1; i++ {
+		min := i
+		for j := i + 1; j < size; j++ {
+			if array[j] < array[min] {
+				min = j
+			}
+		}
+		if min != i {
+			array[i], array[min] = array[min], array[i]
+		}
 	}
-	var j int
-	for i, size := 1, len(array); i < size; i++ {
+	return array
+}
+
+func insertion(array []int) []int {
+	for i, j, size := 1, 0, len(array); i < size; i++ {
 		n := array[i]
 		for j = i - 1; j >= 0 && n < array[j]; j-- {
 			array[j+1] = array[j]
 		}
 		array[j+1] = n
 	}
+	return array
+}
+
+func bubble(array []int) []int {
 	return array
 }
 
