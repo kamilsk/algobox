@@ -7,3 +7,7 @@
 ## [Day 1: Data Types](https://www.hackerrank.com/challenges/30-data-types/problem)
 
 [Solution](30-data-types/main.go).
+
+## [Day 2: Operators](https://www.hackerrank.com/challenges/30-operators/problem)
+
+[Solution](30-operators/main.go).
