@@ -74,6 +74,19 @@
 
 [Решение](lesson-12560/step-7/main.go), [тесты](lesson-12560/step-7/main_test.go).
 
+## 3.1 Квадратичные сортировки
+
+### [Степ 5](https://stepik.org/lesson/12561/step/5)
+
+<details>
+<summary><strong>Условие задачи</strong></summary>
+
+![Условие задачи](lesson-12561/step-5/challenge.png)
+
+</details>
+
+[Решение](lesson-12561/step-5/main.go), [тесты](lesson-12561/step-5/main_test.go).
+
 ---
 
 <sup id="12559-8">1</sup> решение на Go не проходит `test #19`, но это же [решение](lesson-12559/step-8/solution.py),
