@@ -8,7 +8,8 @@ func TestGetTotalX(t *testing.T) {
 		a, b     []int32
 		expected int32
 	}{
-		{"case#01", []int32{}, []int32{}, 0},
+		{"case#01", []int32{2, 4}, []int32{16, 32, 96}, 3},
+		{"case#02", []int32{3, 4}, []int32{24, 48}, 2},
 	}
 	for _, test := range tests {
 		tc := test

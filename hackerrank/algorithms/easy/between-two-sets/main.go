@@ -13,7 +13,44 @@ import (
  * Complete the getTotalX function below.
  */
 func getTotalX(a []int32, b []int32) int32 {
-	//
+	// greatest common divisor
+	gcd := func(x, y int32) int32 {
+		if y == 0 {
+			return x
+		}
+		for x%y != 0 {
+			x, y = y, x%y
+		}
+		return y
+	}
+
+	// least common multiple
+	lcm := func(x, y int32) int32 {
+		return (x * y) / gcd(x, y)
+	}
+
+	reduce := func(fn func(x, y int32) int32, list []int32) int32 {
+		process := make([]int32, len(list))
+		copy(process, list)
+		for len(process) > 1 {
+			process[1] = fn(process[0], process[1])
+			process = process[1:]
+		}
+		return process[0]
+	}
+
+	lcmValue := reduce(lcm, a)
+	gcdValue := reduce(gcd, b)
+
+	var counter int32
+	step := lcmValue
+	for step <= gcdValue {
+		if gcdValue%step == 0 {
+			counter++
+		}
+		step += lcmValue
+	}
+	return counter
 }
 
 func main() {
