@@ -45,9 +45,10 @@ func insertion(array []int) []int {
 
 func bubble(array []int) []int {
 	process := array
-	for len(process) > 0 {
+	for len(process) > 1 {
 		var swap bool
-		for i, last := 0, len(process)-1; i < last; i++ {
+		last := len(process) - 1
+		for i := 0; i < last; i++ {
 			if process[i] > process[i+1] {
 				process[i], process[i+1] = process[i+1], process[i]
 				swap = true
@@ -56,7 +57,7 @@ func bubble(array []int) []int {
 		if !swap {
 			break
 		}
-		process = process[1:]
+		process = process[:last]
 	}
 	return array
 }

@@ -16,6 +16,8 @@ func TestSelection(t *testing.T) {
 		expected []int
 	}{
 		{"case#01", []int{3, 1, 2}, []int{1, 2, 3}},
+		{"case#02", []int{3, 2, 1}, []int{1, 2, 3}},
+		{"case#03", []int{1, 2, 3}, []int{1, 2, 3}},
 	}
 	for _, test := range tests {
 		tc := test
@@ -34,6 +36,8 @@ func TestInsertion(t *testing.T) {
 		expected []int
 	}{
 		{"case#01", []int{3, 1, 2}, []int{1, 2, 3}},
+		{"case#02", []int{3, 2, 1}, []int{1, 2, 3}},
+		{"case#03", []int{1, 2, 3}, []int{1, 2, 3}},
 	}
 	for _, test := range tests {
 		tc := test
@@ -52,6 +56,8 @@ func TestBubble(t *testing.T) {
 		expected []int
 	}{
 		{"case#01", []int{3, 1, 2}, []int{1, 2, 3}},
+		{"case#02", []int{3, 2, 1}, []int{1, 2, 3}},
+		{"case#03", []int{1, 2, 3}, []int{1, 2, 3}},
 	}
 	for _, test := range tests {
 		tc := test

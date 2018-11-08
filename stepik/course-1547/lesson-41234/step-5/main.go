@@ -108,7 +108,8 @@ func (stack *stack) pop() (el int, found bool) {
 	if len(stack.data) == 0 {
 		return
 	}
-	el, stack.data, stack.max = stack.data[len(stack.data)-1], stack.data[:len(stack.data)-1], stack.max[:len(stack.data)-1]
+	last := len(stack.data) - 1
+	el, stack.data, stack.max = stack.data[last], stack.data[:last], stack.max[:last]
 	return el, true
 }
 
