@@ -11,3 +11,7 @@
 ## [Day 2: Operators](https://www.hackerrank.com/challenges/30-operators/problem)
 
 [Solution](30-operators/main.go).
+
+## [Day 3: Intro to Conditional Statements](https://www.hackerrank.com/challenges/30-conditional-statements/problem)
+
+[Solution](30-conditional-statements/main.go).
