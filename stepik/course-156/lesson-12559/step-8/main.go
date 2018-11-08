@@ -11,9 +11,8 @@ import (
 func main() {
 	scanner := bufio.NewScanner(os.Stdin)
 	scanner.Split(bufio.ScanLines)
-	for scanner.Scan() {
-		fmt.Println(fix(scanner.Text()))
-	}
+	_ = scanner.Scan()
+	fmt.Println(fix(scanner.Text()))
 }
 
 type stack []rune

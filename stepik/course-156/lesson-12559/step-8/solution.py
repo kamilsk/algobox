@@ -1,12 +1,4 @@
-import fileinput
-
-
-def main():
-    for line in fileinput.input():
-        print(fix(line))
-
-
-def fix(input):
+def fix(string: str) -> str:
     brackets = {
         '[': {'opening': True,  'reverse': ']'},
         '{': {'opening': True,  'reverse': '}'},
@@ -16,7 +8,7 @@ def fix(input):
         ')': {'opening': False, 'reverse': '('},
     }
     front, back = [], []
-    for char in input:
+    for char in string:
         bracket = brackets[char]
         if bracket['opening']:
             back.append(char)
@@ -29,10 +21,14 @@ def fix(input):
     buf = []
     while front:
         buf.append(brackets[front.pop()]['reverse'])
-    buf.append(input)
+    buf.append(string)
     while back:
         buf.append(brackets[back.pop()]['reverse'])
     return ''.join(buf)
+
+
+def main():
+    print(fix(input()))
 
 
 if __name__ == "__main__":
