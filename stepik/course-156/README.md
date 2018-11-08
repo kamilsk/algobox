@@ -87,6 +87,19 @@
 
 [Решение](lesson-12561/step-5/main.go), [тесты](lesson-12561/step-5/main_test.go).
 
+## 3.2 Сортировка кучей и сортировка слиянием
+
+### [Степ 3](https://stepik.org/lesson/12562/step/3)
+
+<details>
+<summary><strong>Условие задачи</strong></summary>
+
+![Условие задачи](lesson-12562/step-3/challenge.png)
+
+</details>
+
+[Решение](lesson-12562/step-3/main.go), [тесты](lesson-12562/step-3/main_test.go).
+
 ---
 
 <sup id="12559-8">1</sup> решение на Go не проходит `test #19`, но это же [решение](lesson-12559/step-8/solution.py),
