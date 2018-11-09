@@ -55,3 +55,7 @@
 ## [Between Two Sets](https://www.hackerrank.com/challenges/between-two-sets/problem)
 
 [Solution](easy/between-two-sets/main.go), [tests](easy/between-two-sets/main_test.go).
+
+## [Breaking the Records](https://www.hackerrank.com/challenges/breaking-best-and-worst-records/problem)
+
+[Solution](breaking-best-and-worst-records/main.go), [tests](breaking-best-and-worst-records/main_test.go).
