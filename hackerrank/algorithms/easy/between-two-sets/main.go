@@ -14,7 +14,7 @@ import (
  */
 func getTotalX(a []int32, b []int32) int32 {
 	// greatest common divisor
-	gcd := func(x, y int32) int32 {
+	fnGCD := func(x, y int32) int32 {
 		if y == 0 {
 			return x
 		}
@@ -25,8 +25,8 @@ func getTotalX(a []int32, b []int32) int32 {
 	}
 
 	// least common multiple
-	lcm := func(x, y int32) int32 {
-		return (x * y) / gcd(x, y)
+	fnLCM := func(x, y int32) int32 {
+		return (x * y) / fnGCD(x, y)
 	}
 
 	reduce := func(fn func(x, y int32) int32, list []int32) int32 {
@@ -39,16 +39,14 @@ func getTotalX(a []int32, b []int32) int32 {
 		return process[0]
 	}
 
-	lcmValue := reduce(lcm, a)
-	gcdValue := reduce(gcd, b)
-
 	var counter int32
-	step := lcmValue
-	for step <= gcdValue {
-		if gcdValue%step == 0 {
+	lcm, gcd := reduce(fnLCM, a), reduce(fnGCD, b)
+	step := lcm
+	for step <= gcd {
+		if gcd%step == 0 {
 			counter++
 		}
-		step += lcmValue
+		step += lcm
 	}
 	return counter
 }
