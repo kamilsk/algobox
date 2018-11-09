@@ -8,7 +8,7 @@ func TestTimeConversion(t *testing.T) {
 		s        string
 		expected string
 	}{
-		{"case#01", "07:05:45PM", "19:05:45"},
+		{"Testcase 0", "07:05:45PM", "19:05:45"},
 	}
 	for _, test := range tests {
 		tc := test

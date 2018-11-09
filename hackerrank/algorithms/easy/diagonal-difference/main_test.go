@@ -8,7 +8,7 @@ func TestDiagonalDifference(t *testing.T) {
 		arr      [][]int32
 		expected int32
 	}{
-		{"case#01", [][]int32{
+		{"Testcase 0", [][]int32{
 			{11, 2, 4},
 			{4, 5, 6},
 			{10, 8, -12},

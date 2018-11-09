@@ -15,7 +15,7 @@ func TestGradingStudents(t *testing.T) {
 		grades   []int32
 		expected []int32
 	}{
-		{"case#01", []int32{73, 67, 38, 33}, []int32{75, 67, 40, 33}},
+		{"Testcase 0", []int32{73, 67, 38, 33}, []int32{75, 67, 40, 33}},
 	}
 	for _, test := range tests {
 		tc := test

@@ -15,8 +15,8 @@ func TestCompareTriplets(t *testing.T) {
 		a, b     []int32
 		expected []int32
 	}{
-		{"case#01", []int32{5, 6, 7}, []int32{3, 6, 10}, []int32{1, 1}},
-		{"case#02", []int32{17, 28, 30}, []int32{99, 16, 8}, []int32{2, 1}},
+		{"Testcase 0", []int32{5, 6, 7}, []int32{3, 6, 10}, []int32{1, 1}},
+		{"Testcase 7", []int32{17, 28, 30}, []int32{99, 16, 8}, []int32{2, 1}},
 	}
 	for _, test := range tests {
 		tc := test

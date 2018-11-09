@@ -15,8 +15,8 @@ func TestBreakingRecords(t *testing.T) {
 		scores   []int32
 		expected []int32
 	}{
-		{"case#01", []int32{10, 5, 20, 20, 4, 5, 2, 25, 1}, []int32{2, 4}},
-		{"case#02", []int32{3, 4, 21, 36, 10, 28, 35, 5, 24, 42}, []int32{4, 0}},
+		{"Testcase 0", []int32{10, 5, 20, 20, 4, 5, 2, 25, 1}, []int32{2, 4}},
+		{"Testcase 1", []int32{3, 4, 21, 36, 10, 28, 35, 5, 24, 42}, []int32{4, 0}},
 	}
 	for _, test := range tests {
 		tc := test

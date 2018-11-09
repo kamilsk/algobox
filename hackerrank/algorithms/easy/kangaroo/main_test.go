@@ -9,8 +9,8 @@ func TestKangaroo(t *testing.T) {
 		x2, v2   int32
 		expected string
 	}{
-		{"case#01", 0, 3, 4, 2, "YES"},
-		{"case#02", 0, 2, 5, 3, "NO"},
+		{"Testcase 0", 0, 3, 4, 2, "YES"},
+		{"Testcase 1", 0, 2, 5, 3, "NO"},
 		{"custom#01", 0, 2, 4, 2, "NO"},
 	}
 	for _, test := range tests {

@@ -15,7 +15,7 @@ func TestBirthdayCakeCandles(t *testing.T) {
 		ar       []int32
 		expected int32
 	}{
-		{"case#01", []int32{3, 2, 1, 3}, 2},
+		{"Testcase 0", []int32{3, 2, 1, 3}, 2},
 	}
 	for _, test := range tests {
 		tc := test

@@ -8,8 +8,8 @@ func TestSolveMeFirst(t *testing.T) {
 		a, b     uint32
 		expected uint32
 	}{
-		{"case#01", 2, 3, 5},
-		{"case#01", 100, 1000, 1100},
+		{"Testcase 0", 2, 3, 5},
+		{"Testcase 1", 100, 1000, 1100},
 	}
 	for _, test := range tests {
 		tc := test
