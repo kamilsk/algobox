@@ -20,7 +20,7 @@ func main() {
 		y, _ := strconv.Atoi(cc[1])
 		points = append(points, point{x, y})
 	}
-	for _, p := range new(heap).sort(points) {
+	for _, p := range new(heap).Sort(points) {
 		fmt.Println(strings.Join(convert(p), " "))
 	}
 }
@@ -35,7 +35,8 @@ type point struct {
 
 type heap struct{}
 
-func (heap *heap) sort(points []point) []point {
+// Sort uses [heapsort](https://en.wikipedia.org/wiki/Heapsort) to sort passed array in-place.
+func (heap *heap) Sort(points []point) []point {
 	heap.build(points)
 	process := points
 	for len(process) > 1 {
