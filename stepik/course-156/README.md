@@ -100,6 +100,28 @@
 
 [Решение](lesson-12562/step-3/main.go), [тесты](lesson-12562/step-3/main_test.go).
 
+### [Степ 7](https://stepik.org/lesson/12562/step/7)
+
+<details>
+<summary><strong>Условие задачи</strong></summary>
+
+![Условие задачи](lesson-12562/step-7/challenge.png)
+
+</details>
+
+[Решение](lesson-12562/step-7/main.go), [тесты](lesson-12562/step-7/main_test.go).
+
+### [Степ 9](https://stepik.org/lesson/12562/step/9)
+
+<details>
+<summary><strong>Условие задачи</strong></summary>
+
+![Условие задачи](lesson-12562/step-9/challenge.png)
+
+</details>
+
+[Решение](lesson-12562/step-9/main.go), [тесты](lesson-12562/step-9/main_test.go).
+
 ---
 
 <sup id="12559-8">1</sup> решение на Go не проходит `test #19`, но это же [решение](lesson-12559/step-8/solution.py),
