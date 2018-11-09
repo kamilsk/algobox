@@ -15,3 +15,7 @@
 ## [Day 3: Intro to Conditional Statements](https://www.hackerrank.com/challenges/30-conditional-statements/problem)
 
 [Solution](30-conditional-statements/main.go).
+
+## [Day 4: Class vs. Instance](https://www.hackerrank.com/challenges/30-class-vs-instance/problem)
+
+[Solution](30-class-vs-instance/main.go).
