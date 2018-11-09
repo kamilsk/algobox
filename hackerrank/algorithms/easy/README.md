@@ -63,3 +63,7 @@
 ## [Birthday Chocolate](https://www.hackerrank.com/challenges/the-birthday-bar/problem)
 
 [Solution](the-birthday-bar/main.go), [tests](the-birthday-bar/main_test.go).
+
+## [Divisible Sum Pairs](https://www.hackerrank.com/challenges/divisible-sum-pairs/problem)
+
+[Solution](divisible-sum-pairs/main.go), [tests](divisible-sum-pairs/main_test.go).
