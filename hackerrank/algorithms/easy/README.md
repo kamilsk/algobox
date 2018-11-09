@@ -59,3 +59,7 @@
 ## [Breaking the Records](https://www.hackerrank.com/challenges/breaking-best-and-worst-records/problem)
 
 [Solution](breaking-best-and-worst-records/main.go), [tests](breaking-best-and-worst-records/main_test.go).
+
+## [Birthday Chocolate](https://www.hackerrank.com/challenges/the-birthday-bar/problem)
+
+[Solution](the-birthday-bar/main.go), [tests](the-birthday-bar/main_test.go).
