@@ -19,3 +19,7 @@
 ## [Day 4: Class vs. Instance](https://www.hackerrank.com/challenges/30-class-vs-instance/problem)
 
 [Solution](30-class-vs-instance/main.go).
+
+## [Day 5: Loops](https://www.hackerrank.com/challenges/30-loops/problem)
+
+[Solution](30-loops/main.go).
