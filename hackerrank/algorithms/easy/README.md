@@ -67,3 +67,7 @@
 ## [Divisible Sum Pairs](https://www.hackerrank.com/challenges/divisible-sum-pairs/problem)
 
 [Solution](divisible-sum-pairs/main.go), [tests](divisible-sum-pairs/main_test.go).
+
+## [Migratory Birds](https://www.hackerrank.com/challenges/migratory-birds/problem)
+
+[Solution](migratory-birds/main.go), [tests](migratory-birds/main_test.go).
