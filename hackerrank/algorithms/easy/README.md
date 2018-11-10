@@ -79,3 +79,7 @@
 ## [Bon Appétit](https://www.hackerrank.com/challenges/bon-appetit/problem)
 
 [Solution](bon-appetit/main.go).
+
+## [Sock Merchant](https://www.hackerrank.com/challenges/sock-merchant/problem)
+
+[Solution](sock-merchant/main.go), [tests](sock-merchant/main_test.go).
