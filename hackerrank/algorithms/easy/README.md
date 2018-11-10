@@ -75,3 +75,7 @@
 ## [Day of the Programmer](https://www.hackerrank.com/challenges/day-of-the-programmer/problem)
 
 [Solution](day-of-the-programmer/main.go), [tests](day-of-the-programmer/main_test.go).
+
+## [Bon Appétit](https://www.hackerrank.com/challenges/bon-appetit/problem)
+
+[Solution](bon-appetit/main.go).
