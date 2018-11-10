@@ -71,3 +71,7 @@
 ## [Migratory Birds](https://www.hackerrank.com/challenges/migratory-birds/problem)
 
 [Solution](migratory-birds/main.go), [tests](migratory-birds/main_test.go).
+
+## [Day of the Programmer](https://www.hackerrank.com/challenges/day-of-the-programmer/problem)
+
+[Solution](day-of-the-programmer/main.go), [tests](day-of-the-programmer/main_test.go).
