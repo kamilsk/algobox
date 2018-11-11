@@ -23,3 +23,7 @@
 ## [Day 5: Loops](https://www.hackerrank.com/challenges/30-loops/problem)
 
 [Solution](30-loops/main.go).
+
+## [Day 6: Let's Review](https://www.hackerrank.com/challenges/30-review-loop/problem)
+
+[Solution](30-review-loop/main.go).
