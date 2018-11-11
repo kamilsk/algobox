@@ -83,3 +83,7 @@
 ## [Sock Merchant](https://www.hackerrank.com/challenges/sock-merchant/problem)
 
 [Solution](sock-merchant/main.go), [tests](sock-merchant/main_test.go).
+
+## [Drawing Book](https://www.hackerrank.com/challenges/drawing-book/problem)
+
+[Solution](drawing-book/main.go), [tests](drawing-book/main_test.go).
