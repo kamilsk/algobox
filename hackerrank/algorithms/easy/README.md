@@ -87,3 +87,7 @@
 ## [Drawing Book](https://www.hackerrank.com/challenges/drawing-book/problem)
 
 [Solution](drawing-book/main.go), [tests](drawing-book/main_test.go).
+
+## [Counting Valleys](https://www.hackerrank.com/challenges/counting-valleys/problem)
+
+[Solution](counting-valleys/main.go), [tests](counting-valleys/main_test.go).
