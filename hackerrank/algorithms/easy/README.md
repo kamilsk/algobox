@@ -91,3 +91,7 @@
 ## [Counting Valleys](https://www.hackerrank.com/challenges/counting-valleys/problem)
 
 [Solution](counting-valleys/main.go), [tests](counting-valleys/main_test.go).
+
+## [Electronics Shop](https://www.hackerrank.com/challenges/electronics-shop/problem)
+
+[Solution](electronics-shop/main.go), [tests](electronics-shop/main_test.go).
