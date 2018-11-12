@@ -27,3 +27,7 @@
 ## [Day 6: Let's Review](https://www.hackerrank.com/challenges/30-review-loop/problem)
 
 [Solution](30-review-loop/main.go).
+
+## [Day 7: Arrays](https://www.hackerrank.com/challenges/30-arrays/problem)
+
+[Solution](30-arrays/main.go).
