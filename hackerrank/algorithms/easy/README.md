@@ -95,3 +95,7 @@
 ## [Electronics Shop](https://www.hackerrank.com/challenges/electronics-shop/problem)
 
 [Solution](electronics-shop/main.go), [tests](electronics-shop/main_test.go).
+
+## [Cats and a Mouse](https://www.hackerrank.com/challenges/cats-and-a-mouse/problem)
+
+[Solution](cats-and-a-mouse/main.go), [tests](cats-and-a-mouse/main_test.go).
