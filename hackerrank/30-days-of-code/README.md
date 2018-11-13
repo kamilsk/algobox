@@ -31,3 +31,7 @@
 ## [Day 7: Arrays](https://www.hackerrank.com/challenges/30-arrays/problem)
 
 [Solution](30-arrays/main.go).
+
+## [Day 8: Dictionaries and Maps](https://www.hackerrank.com/challenges/30-dictionaries-and-maps/problem)
+
+[Solution](30-dictionaries-and-maps/main.go).
