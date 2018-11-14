@@ -35,3 +35,7 @@
 ## [Day 8: Dictionaries and Maps](https://www.hackerrank.com/challenges/30-dictionaries-and-maps/problem)
 
 [Solution](30-dictionaries-and-maps/main.go).
+
+## [Day 9: Recursion 3](https://www.hackerrank.com/challenges/30-recursion/problem)
+
+[Solution](30-recursion/main.go).
