@@ -99,3 +99,7 @@
 ## [Cats and a Mouse](https://www.hackerrank.com/challenges/cats-and-a-mouse/problem)
 
 [Solution](cats-and-a-mouse/main.go), [tests](cats-and-a-mouse/main_test.go).
+
+## [Picking Numbers](https://www.hackerrank.com/challenges/picking-numbers/problem)
+
+[Solution](picking-numbers/main.go), [tests](picking-numbers/main_test.go).
