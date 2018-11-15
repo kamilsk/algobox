@@ -39,3 +39,7 @@
 ## [Day 9: Recursion 3](https://www.hackerrank.com/challenges/30-recursion/problem)
 
 [Solution](30-recursion/main.go).
+
+## [Day 10: Binary Numbers](https://www.hackerrank.com/challenges/30-binary-numbers/problem)
+
+[Solution](30-binary-numbers/main.go).
