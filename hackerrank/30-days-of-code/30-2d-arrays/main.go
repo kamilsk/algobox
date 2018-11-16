@@ -31,7 +31,7 @@ func main() {
 		arr = append(arr, arrRow)
 	}
 
-	var max int32
+	var max int32 = -9*7 - 1
 	for i, floor := 0, 4; i < floor; i++ {
 		for j, left := 0, 4; j < left; j++ {
 			var sum int32
