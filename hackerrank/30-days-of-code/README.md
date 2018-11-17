@@ -47,3 +47,7 @@
 ## [Day 11: 2D Arrays](https://www.hackerrank.com/challenges/30-2d-arrays/problem)
 
 [Solution](30-2d-arrays/main.go).
+
+## [Day 12: Inheritance](https://www.hackerrank.com/challenges/30-inheritance/problem)
+
+[Solution](30-inheritance/solution.py).
