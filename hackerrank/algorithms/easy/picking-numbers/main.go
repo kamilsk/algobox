@@ -23,27 +23,31 @@ func pickingNumbers(a []int32) int32 {
 		converted[i] = int(n)
 	}
 	sort.Ints(converted)
-	groups := make([][]int, 0, 4)
-	n, group := converted[0], make([]int, 0, 4)
-	group = append(group, n)
-	for _, nn := range converted[1:] {
-		if nn-n > 1 {
-			groups = append(groups, group)
-			group = make([]int, 0, 4)
-			group = append(group, nn)
-			n = nn
+	base, prev, i, j, max := converted[0], -1, 1, 0, 0
+	for _, n := range converted[1:] {
+		if n == base {
+			i++
 			continue
 		}
-		group = append(group, nn)
-	}
-	groups = append(groups, group)
-	var max int32
-	for i := range groups {
-		if ln := int32(len(groups[i])); max < ln {
-			max = ln
+		if n-base == 1 {
+			prev = n
+			j++
+			continue
 		}
+		if max < i+j {
+			max = i + j
+		}
+		if prev == -1 {
+			base, i, j = n, 1, 0
+		} else {
+			base, i, j = prev, j, 1
+		}
+		prev = -1
 	}
-	return max
+	if max < i+j {
+		max = i + j
+	}
+	return int32(max)
 }
 
 func main() {
