@@ -51,3 +51,7 @@
 ## [Day 12: Inheritance](https://www.hackerrank.com/challenges/30-inheritance/problem)
 
 [Solution](30-inheritance/solution.py).
+
+## [Day 13: Abstract Classes](https://www.hackerrank.com/challenges/30-abstract-classes/problem)
+
+[Solution](30-abstract-classes/solution.py).
