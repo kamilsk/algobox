@@ -103,3 +103,7 @@
 ## [Picking Numbers](https://www.hackerrank.com/challenges/picking-numbers/problem)
 
 [Solution](picking-numbers/main.go), [tests](picking-numbers/main_test.go).
+
+## [The Hurdle Race](https://www.hackerrank.com/challenges/the-hurdle-race/problem)
+
+[Solution](the-hurdle-race/main.go), [tests](the-hurdle-race/main_test.go).
