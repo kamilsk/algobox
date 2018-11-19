@@ -111,3 +111,7 @@
 ## [Designer PDF Viewer](https://www.hackerrank.com/challenges/designer-pdf-viewer/problem)
 
 [Solution](designer-pdf-viewer/main.go), [tests](designer-pdf-viewer/main_test.go).
+
+## [Utopian Tree](https://www.hackerrank.com/challenges/utopian-tree/problem)
+
+[Solution](utopian-tree/main.go), [tests](utopian-tree/main_test.go).
