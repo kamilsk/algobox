@@ -115,3 +115,7 @@
 ## [Utopian Tree](https://www.hackerrank.com/challenges/utopian-tree/problem)
 
 [Solution](utopian-tree/main.go), [tests](utopian-tree/main_test.go).
+
+## [Angry Professor](https://www.hackerrank.com/challenges/angry-professor/problem)
+
+[Solution](angry-professor/main.go), [tests](angry-professor/main_test.go).
