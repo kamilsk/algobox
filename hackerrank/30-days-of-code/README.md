@@ -55,3 +55,7 @@
 ## [Day 13: Abstract Classes](https://www.hackerrank.com/challenges/30-abstract-classes/problem)
 
 [Solution](30-abstract-classes/solution.py).
+
+## [Day 14: Scope](https://www.hackerrank.com/challenges/30-scope/problem)
+
+[Solution](30-scope/solution.py).
