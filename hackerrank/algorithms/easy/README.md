@@ -119,3 +119,7 @@
 ## [Angry Professor](https://www.hackerrank.com/challenges/angry-professor/problem)
 
 [Solution](angry-professor/main.go), [tests](angry-professor/main_test.go).
+
+## [Beautiful Days at the Movies](https://www.hackerrank.com/challenges/beautiful-days-at-the-movies/problem)
+
+[Solution](beautiful-days-at-the-movies/main.go), [tests](beautiful-days-at-the-movies/main_test.go).
