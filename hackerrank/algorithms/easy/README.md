@@ -123,3 +123,7 @@
 ## [Beautiful Days at the Movies](https://www.hackerrank.com/challenges/beautiful-days-at-the-movies/problem)
 
 [Solution](beautiful-days-at-the-movies/main.go), [tests](beautiful-days-at-the-movies/main_test.go).
+
+## [Viral Advertising](https://www.hackerrank.com/challenges/strange-advertising/problem)
+
+[Solution](strange-advertising/main.go), [tests](strange-advertising/main_test.go).
