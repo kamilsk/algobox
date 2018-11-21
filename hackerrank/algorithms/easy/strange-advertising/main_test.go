@@ -4,8 +4,8 @@ import "testing"
 
 func TestViralAdvertising(t *testing.T) {
 	tests := []struct {
-		name string
-		n int32
+		name     string
+		n        int32
 		expected int32
 	}{
 		{"Test case 0", 3, 9},

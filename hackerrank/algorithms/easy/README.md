@@ -127,3 +127,7 @@
 ## [Viral Advertising](https://www.hackerrank.com/challenges/strange-advertising/problem)
 
 [Solution](strange-advertising/main.go), [tests](strange-advertising/main_test.go).
+
+## [Save the Prisoner!](https://www.hackerrank.com/challenges/save-the-prisoner/problem)
+
+[Solution](save-the-prisoner/main.go), [tests](save-the-prisoner/main_test.go).
