@@ -63,3 +63,7 @@
 ## [Day 15: Linked List](https://www.hackerrank.com/challenges/30-linked-list/problem)
 
 [Solution](30-linked-list/solution.py).
+
+## [Day 16: Exceptions - String to Integer](https://www.hackerrank.com/challenges/30-exceptions-string-to-integer/problem)
+
+[Solution](30-exceptions-string-to-integer/solution.py).
