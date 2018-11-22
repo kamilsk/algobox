@@ -131,3 +131,7 @@
 ## [Save the Prisoner!](https://www.hackerrank.com/challenges/save-the-prisoner/problem)
 
 [Solution](save-the-prisoner/main.go), [tests](save-the-prisoner/main_test.go).
+
+## [Circular Array Rotation](https://www.hackerrank.com/challenges/circular-array-rotation/problem)
+
+[Solution](circular-array-rotation/main.go), [tests](circular-array-rotation/main_test.go).
