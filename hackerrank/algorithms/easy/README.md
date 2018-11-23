@@ -139,3 +139,7 @@
 ## [Sequence Equation](https://www.hackerrank.com/challenges/permutation-equation/problem)
 
 [Solution](permutation-equation/main.go), [tests](permutation-equation/main_test.go).
+
+## [Jumping on the Clouds: Revisited](https://www.hackerrank.com/challenges/jumping-on-the-clouds-revisited/problem)
+
+[Solution](jumping-on-the-clouds-revisited/main.go), [tests](jumping-on-the-clouds-revisited/main_test.go).
