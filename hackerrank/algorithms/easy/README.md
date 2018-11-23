@@ -135,3 +135,7 @@
 ## [Circular Array Rotation](https://www.hackerrank.com/challenges/circular-array-rotation/problem)
 
 [Solution](circular-array-rotation/main.go), [tests](circular-array-rotation/main_test.go).
+
+## [Sequence Equation](https://www.hackerrank.com/challenges/permutation-equation/problem)
+
+[Solution](permutation-equation/main.go), [tests](permutation-equation/main_test.go).

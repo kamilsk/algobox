@@ -12,13 +12,13 @@ import (
 // Complete the circularArrayRotation function below.
 func circularArrayRotation(a []int32, k int32, queries []int32) []int32 {
 	size := len(a)
-	mutated := make([]int32, size)
+	rotated := make([]int32, size)
 	for i, n := range a {
-		mutated[(i+int(k))%size] = n
+		rotated[(i+int(k))%size] = n
 	}
 	result := make([]int32, 0, len(queries))
 	for _, q := range queries {
-		result = append(result, mutated[q])
+		result = append(result, rotated[q])
 	}
 	return result
 }
