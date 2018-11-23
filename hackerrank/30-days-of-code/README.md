@@ -71,3 +71,7 @@
 ## [Day 17: More Exceptions](https://www.hackerrank.com/challenges/30-more-exceptions/problem)
 
 [Solution](30-more-exceptions/solution.py).
+
+## [Day 18: Queues and Stacks](https://www.hackerrank.com/challenges/30-queues-stacks/problem)
+
+[Solution](30-queues-stacks/solution.py).
