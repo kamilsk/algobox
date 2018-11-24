@@ -75,3 +75,7 @@
 ## [Day 18: Queues and Stacks](https://www.hackerrank.com/challenges/30-queues-stacks/problem)
 
 [Solution](30-queues-stacks/solution.py).
+
+## [Day 19: Interfaces](https://www.hackerrank.com/challenges/30-interfaces/problem)
+
+[Solution](30-interfaces/solution.py).
