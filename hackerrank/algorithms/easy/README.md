@@ -159,13 +159,13 @@
 | [Compare the Triplets]             | ➕ | ➕ |
 | [A Very Big Sum]                   | ➕ | ➕ |
 | [Diagonal Difference]              | ➕ | ➕ |
-| [Plus Minus]                       | ➕ | ➕ |
-| [Staircase]                        | ➕ | ➕ |
-| [Mini-Max Sum]                     | ➕ | ➕ |
+| [Plus Minus]                       | ➕ | ➖ |
+| [Staircase]                        | ➕ | ➖ |
+| [Mini-Max Sum]                     | ➕ | ➖ |
 | [Birthday Cake Candles]            | ➕ | ➕ |
 | [Time Conversion]                  | ➕ | ➕ |
 | [Grading Students]                 | ➕ | ➕ |
-| [Apple and Orange]                 | ➕ | ➕ |
+| [Apple and Orange]                 | ➕ | ➖ |
 | [Kangaroo]                         | ➕ | ➕ |
 | [Between Two Sets]                 | ➕ | ➕ |
 | [Breaking the Records]             | ➕ | ➕ |
@@ -173,7 +173,7 @@
 | [Divisible Sum Pairs]              | ➕ | ➕ |
 | [Migratory Birds]                  | ➕ | ➕ |
 | [Day of the Programmer]            | ➕ | ➕ |
-| [Bon Appétit]                      | ➕ | ➕ |
+| [Bon Appétit]                      | ➕ | ➖ |
 | [Sock Merchant]                    | ➕ | ➕ |
 | [Drawing Book]                     | ➕ | ➕ |
 | [Counting Valleys]                 | ➕ | ➕ |
