@@ -143,3 +143,7 @@
 ## [Jumping on the Clouds: Revisited](https://www.hackerrank.com/challenges/jumping-on-the-clouds-revisited/problem)
 
 [Solution](jumping-on-the-clouds-revisited/main.go), [tests](jumping-on-the-clouds-revisited/main_test.go).
+
+## [Find Digits](https://www.hackerrank.com/challenges/find-digits/problem)
+
+[Solution](find-digits/main.go), [tests](find-digits/main_test.go).
