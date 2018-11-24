@@ -147,3 +147,48 @@
 ## [Find Digits](https://www.hackerrank.com/challenges/find-digits/problem)
 
 [Solution](find-digits/main.go), [tests](find-digits/main_test.go).
+
+## [Append and Delete](https://www.hackerrank.com/challenges/append-and-delete/problem)
+
+[Solution](append-and-delete/main.go), [tests](append-and-delete/main_test.go).
+
+| Problem                            | Solution | Tests |
+|:-----------------------------------|:---------|:------|
+| [Solve Me First]                   | ➕ | ➕ |
+| [Simple Array Sum]                 | ➕ | ➕ |
+| [Compare the Triplets]             | ➕ | ➕ |
+| [A Very Big Sum]                   | ➕ | ➕ |
+| [Diagonal Difference]              | ➕ | ➕ |
+| [Plus Minus]                       | ➕ | ➕ |
+| [Staircase]                        | ➕ | ➕ |
+| [Mini-Max Sum]                     | ➕ | ➕ |
+| [Birthday Cake Candles]            | ➕ | ➕ |
+| [Time Conversion]                  | ➕ | ➕ |
+| [Grading Students]                 | ➕ | ➕ |
+| [Apple and Orange]                 | ➕ | ➕ |
+| [Kangaroo]                         | ➕ | ➕ |
+| [Between Two Sets]                 | ➕ | ➕ |
+| [Breaking the Records]             | ➕ | ➕ |
+| [Birthday Chocolate]               | ➕ | ➕ |
+| [Divisible Sum Pairs]              | ➕ | ➕ |
+| [Migratory Birds]                  | ➕ | ➕ |
+| [Day of the Programmer]            | ➕ | ➕ |
+| [Bon Appétit]                      | ➕ | ➕ |
+| [Sock Merchant]                    | ➕ | ➕ |
+| [Drawing Book]                     | ➕ | ➕ |
+| [Counting Valleys]                 | ➕ | ➕ |
+| [Electronics Shop]                 | ➕ | ➕ |
+| [Cats and a Mouse]                 | ➕ | ➕ |
+| [Picking Numbers]                  | ➕ | ➕ |
+| [The Hurdle Race]                  | ➕ | ➕ |
+| [Designer PDF Viewer]              | ➕ | ➕ |
+| [Utopian Tree]                     | ➕ | ➕ |
+| [Angry Professor]                  | ➕ | ➕ |
+| [Beautiful Days at the Movies]     | ➕ | ➕ |
+| [Viral Advertising]                | ➕ | ➕ |
+| [Save the Prisoner!]               | ➕ | ➕ |
+| [Circular Array Rotation]          | ➕ | ➕ |
+| [Sequence Equation]                | ➕ | ➕ |
+| [Jumping on the Clouds: Revisited] | ➕ | ➕ |
+| [Find Digits]                      | ➕ | ➕ |
+| [Append and Delete]                | ➕ | ➕ |
