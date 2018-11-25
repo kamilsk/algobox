@@ -152,43 +152,6 @@
 
 [Solution](append-and-delete/main.go), [tests](append-and-delete/main_test.go).
 
-| Problem                            | Solution | Tests |
-|:-----------------------------------|:---------|:------|
-| [Solve Me First]                   | ➕ | ➕ |
-| [Simple Array Sum]                 | ➕ | ➕ |
-| [Compare the Triplets]             | ➕ | ➕ |
-| [A Very Big Sum]                   | ➕ | ➕ |
-| [Diagonal Difference]              | ➕ | ➕ |
-| [Plus Minus]                       | ➕ | ➖ |
-| [Staircase]                        | ➕ | ➖ |
-| [Mini-Max Sum]                     | ➕ | ➖ |
-| [Birthday Cake Candles]            | ➕ | ➕ |
-| [Time Conversion]                  | ➕ | ➕ |
-| [Grading Students]                 | ➕ | ➕ |
-| [Apple and Orange]                 | ➕ | ➖ |
-| [Kangaroo]                         | ➕ | ➕ |
-| [Between Two Sets]                 | ➕ | ➕ |
-| [Breaking the Records]             | ➕ | ➕ |
-| [Birthday Chocolate]               | ➕ | ➕ |
-| [Divisible Sum Pairs]              | ➕ | ➕ |
-| [Migratory Birds]                  | ➕ | ➕ |
-| [Day of the Programmer]            | ➕ | ➕ |
-| [Bon Appétit]                      | ➕ | ➖ |
-| [Sock Merchant]                    | ➕ | ➕ |
-| [Drawing Book]                     | ➕ | ➕ |
-| [Counting Valleys]                 | ➕ | ➕ |
-| [Electronics Shop]                 | ➕ | ➕ |
-| [Cats and a Mouse]                 | ➕ | ➕ |
-| [Picking Numbers]                  | ➕ | ➕ |
-| [The Hurdle Race]                  | ➕ | ➕ |
-| [Designer PDF Viewer]              | ➕ | ➕ |
-| [Utopian Tree]                     | ➕ | ➕ |
-| [Angry Professor]                  | ➕ | ➕ |
-| [Beautiful Days at the Movies]     | ➕ | ➕ |
-| [Viral Advertising]                | ➕ | ➕ |
-| [Save the Prisoner!]               | ➕ | ➕ |
-| [Circular Array Rotation]          | ➕ | ➕ |
-| [Sequence Equation]                | ➕ | ➕ |
-| [Jumping on the Clouds: Revisited] | ➕ | ➕ |
-| [Find Digits]                      | ➕ | ➕ |
-| [Append and Delete]                | ➕ | ➕ |
+## [Sherlock and Squares](https://www.hackerrank.com/challenges/sherlock-and-squares/problem)
+
+[Solution](sherlock-and-squares/main.go), [tests](sherlock-and-squares/main_test.go).
