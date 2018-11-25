@@ -79,3 +79,7 @@
 ## [Day 19: Interfaces](https://www.hackerrank.com/challenges/30-interfaces/problem)
 
 [Solution](30-interfaces/solution.py).
+
+## [Day 20: Sorting](https://www.hackerrank.com/challenges/30-sorting/problem)
+
+[Solution](30-sorting/main.go).
