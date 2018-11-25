@@ -155,3 +155,11 @@
 ## [Sherlock and Squares](https://www.hackerrank.com/challenges/sherlock-and-squares/problem)
 
 [Solution](sherlock-and-squares/main.go), [tests](sherlock-and-squares/main_test.go).
+
+## [Library Fine](https://www.hackerrank.com/challenges/library-fine/problem)
+
+[Solution](library-fine/main.go), [tests](library-fine/main_test.go).
+
+## [Cut the sticks](https://www.hackerrank.com/challenges/cut-the-sticks/problem)
+
+...
