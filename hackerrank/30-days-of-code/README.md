@@ -83,3 +83,7 @@
 ## [Day 20: Sorting](https://www.hackerrank.com/challenges/30-sorting/problem)
 
 [Solution](30-sorting/main.go).
+
+## [Day 21: Generics](https://www.hackerrank.com/challenges/30-generics/problem)
+
+[Solution](30-generics/solution.java).
