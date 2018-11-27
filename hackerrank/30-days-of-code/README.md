@@ -87,3 +87,7 @@
 ## [Day 21: Generics](https://www.hackerrank.com/challenges/30-generics/problem)
 
 [Solution](30-generics/solution.java).
+
+## [Day 22: Binary Search Trees](https://www.hackerrank.com/challenges/30-binary-search-trees/problem)
+
+[Solution](30-binary-search-trees/solution.py).
