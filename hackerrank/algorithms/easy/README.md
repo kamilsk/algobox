@@ -163,3 +163,7 @@
 ## [Cut the sticks](https://www.hackerrank.com/challenges/cut-the-sticks/problem)
 
 [Solution](cut-the-sticks/main.go), [tests](cut-the-sticks/main_test.go).
+
+## [Repeated String](https://www.hackerrank.com/challenges/repeated-string/problem)
+
+[Solution](repeated-string/main.go), [tests](repeated-string/main_test.go).
