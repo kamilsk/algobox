@@ -162,4 +162,4 @@
 
 ## [Cut the sticks](https://www.hackerrank.com/challenges/cut-the-sticks/problem)
 
-...
+[Solution](cut-the-sticks/main.go), [tests](cut-the-sticks/main_test.go).
