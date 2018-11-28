@@ -91,3 +91,7 @@
 ## [Day 22: Binary Search Trees](https://www.hackerrank.com/challenges/30-binary-search-trees/problem)
 
 [Solution](30-binary-search-trees/solution.py).
+
+## [Day 23: BST Level-Order Traversal](https://www.hackerrank.com/challenges/30-binary-trees/problem)
+
+[Solution](30-binary-trees/solution.py).
