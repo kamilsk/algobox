@@ -167,3 +167,7 @@
 ## [Repeated String](https://www.hackerrank.com/challenges/repeated-string/problem)
 
 [Solution](repeated-string/main.go), [tests](repeated-string/main_test.go).
+
+## [Jumping on the Clouds](https://www.hackerrank.com/challenges/jumping-on-the-clouds/problem)
+
+[Solution](jumping-on-the-clouds/main.go), [tests](jumping-on-the-clouds/main_test.go).
