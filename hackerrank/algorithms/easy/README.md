@@ -171,3 +171,7 @@
 ## [Jumping on the Clouds](https://www.hackerrank.com/challenges/jumping-on-the-clouds/problem)
 
 [Solution](jumping-on-the-clouds/main.go), [tests](jumping-on-the-clouds/main_test.go).
+
+## [Equalize the Array](https://www.hackerrank.com/challenges/equality-in-a-array/problem)
+
+[Solution](equality-in-a-array/main.go), [tests](equality-in-a-array/main_test.go).
