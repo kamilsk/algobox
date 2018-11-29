@@ -175,3 +175,7 @@
 ## [Equalize the Array](https://www.hackerrank.com/challenges/equality-in-a-array/problem)
 
 [Solution](equality-in-a-array/main.go), [tests](equality-in-a-array/main_test.go).
+
+## [ACM ICPC Team](https://www.hackerrank.com/challenges/acm-icpc-team/problem)
+
+[Solution](acm-icpc-team/main.go), [tests](acm-icpc-team/main_test.go).
