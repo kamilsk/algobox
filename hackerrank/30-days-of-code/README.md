@@ -95,3 +95,7 @@
 ## [Day 23: BST Level-Order Traversal](https://www.hackerrank.com/challenges/30-binary-trees/problem)
 
 [Solution](30-binary-trees/solution.py).
+
+## [Day 24: More Linked Lists](https://www.hackerrank.com/challenges/30-linked-list-deletion/problem)
+
+[Solution](30-linked-list-deletion/solution.py).
