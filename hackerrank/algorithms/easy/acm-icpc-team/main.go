@@ -11,7 +11,28 @@ import (
 
 // Complete the acmTeam function below.
 func acmTeam(topic []string) []int32 {
-	return nil
+	var howMach, howMany int32
+	for len(topic) > 1 {
+		var compare string
+		compare, topic = topic[0], topic[1:]
+		for _, t := range topic {
+			coverage := int32(0)
+			for i := range compare {
+				if compare[i] == '1' || t[i] == '1' {
+					coverage++
+				}
+			}
+			if coverage > howMach {
+				howMach, howMany = coverage, 1
+				continue
+			}
+			if coverage == howMach {
+				howMany++
+				continue
+			}
+		}
+	}
+	return []int32{howMach, howMany}
 }
 
 func main() {
