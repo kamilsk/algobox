@@ -179,3 +179,7 @@
 ## [ACM ICPC Team](https://www.hackerrank.com/challenges/acm-icpc-team/problem)
 
 [Solution](acm-icpc-team/main.go), [tests](acm-icpc-team/main_test.go).
+
+## [Taum and B'day](https://www.hackerrank.com/challenges/taum-and-bday/problem)
+
+[Solution](taum-and-bday/main.go), [tests](taum-and-bday/main_test.go).
