@@ -103,3 +103,7 @@
 ## [Day 25: Running Time and Complexity](https://www.hackerrank.com/challenges/30-running-time-and-complexity/problem)
 
 [Solution](30-running-time-and-complexity/main.go).
+
+## [Day 26: Nested Logic](https://www.hackerrank.com/challenges/30-nested-logic/problem)
+
+[Solution](30-nested-logic/main.go).
