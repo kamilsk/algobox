@@ -183,3 +183,7 @@
 ## [Taum and B'day](https://www.hackerrank.com/challenges/taum-and-bday/problem)
 
 [Solution](taum-and-bday/main.go), [tests](taum-and-bday/main_test.go).
+
+## [Modified Kaprekar Numbers](https://www.hackerrank.com/challenges/kaprekar-numbers/problem)
+
+[Solution](kaprekar-numbers/main.go).
