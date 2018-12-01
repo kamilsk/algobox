@@ -10,8 +10,14 @@ import (
 )
 
 // Complete the taumBday function below.
-func taumBday(b int32, w int32, bc int32, wc int32, z int32) int32 {
-	return 0
+func taumBday(b int64, w int64, bc int64, wc int64, z int64) int64 {
+	if bc-wc > z {
+		return (w+b)*wc + b*z
+	}
+	if wc-bc > z {
+		return (w+b)*bc + w*z
+	}
+	return w*wc + b*bc
 }
 
 func main() {
@@ -31,27 +37,22 @@ func main() {
 	for tItr := 0; tItr < int(t); tItr++ {
 		bw := strings.Split(readLine(reader), " ")
 
-		bTemp, err := strconv.ParseInt(bw[0], 10, 64)
+		b, err := strconv.ParseInt(bw[0], 10, 64)
 		checkError(err)
-		b := int32(bTemp)
 
-		wTemp, err := strconv.ParseInt(bw[1], 10, 64)
+		w, err := strconv.ParseInt(bw[1], 10, 64)
 		checkError(err)
-		w := int32(wTemp)
 
 		bcWcz := strings.Split(readLine(reader), " ")
 
-		bcTemp, err := strconv.ParseInt(bcWcz[0], 10, 64)
+		bc, err := strconv.ParseInt(bcWcz[0], 10, 64)
 		checkError(err)
-		bc := int32(bcTemp)
 
-		wcTemp, err := strconv.ParseInt(bcWcz[1], 10, 64)
+		wc, err := strconv.ParseInt(bcWcz[1], 10, 64)
 		checkError(err)
-		wc := int32(wcTemp)
 
-		zTemp, err := strconv.ParseInt(bcWcz[2], 10, 64)
+		z, err := strconv.ParseInt(bcWcz[2], 10, 64)
 		checkError(err)
-		z := int32(zTemp)
 
 		result := taumBday(b, w, bc, wc, z)
 
