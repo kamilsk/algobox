@@ -107,3 +107,7 @@
 ## [Day 26: Nested Logic](https://www.hackerrank.com/challenges/30-nested-logic/problem)
 
 [Solution](30-nested-logic/main.go).
+
+## [Day 27: Testing](https://www.hackerrank.com/challenges/30-testing/problem)
+
+[Solution](30-testing/solution.py).
