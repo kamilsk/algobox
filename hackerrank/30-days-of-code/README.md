@@ -111,3 +111,7 @@
 ## [Day 27: Testing](https://www.hackerrank.com/challenges/30-testing/problem)
 
 [Solution](30-testing/solution.py).
+
+## [Day 28: RegEx, Patterns, and Intro to Databases](https://www.hackerrank.com/challenges/30-regex-patterns/problem)
+
+[Solution](30-regex-patterns/main.go).
