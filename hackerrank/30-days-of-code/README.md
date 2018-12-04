@@ -115,3 +115,7 @@
 ## [Day 28: RegEx, Patterns, and Intro to Databases](https://www.hackerrank.com/challenges/30-regex-patterns/problem)
 
 [Solution](30-regex-patterns/main.go).
+
+## [Day 29: Bitwise AND](https://www.hackerrank.com/challenges/30-bitwise-and/problem)
+
+[Solution](30-bitwise-and/main.go).
