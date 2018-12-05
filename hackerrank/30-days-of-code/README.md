@@ -2,7 +2,8 @@
 
 ## [Day 0: Hello, World](https://www.hackerrank.com/challenges/30-hello-world/problem)
 
-[Solution](30-hello-world/main.go).
+Solutions: [Go](30-hello-world/solution.go), [Java](30-hello-world/solution.java),
+[PHP](30-hello-world/solution.php), [Python](30-hello-world/solution.py).
 
 ## [Day 1: Data Types](https://www.hackerrank.com/challenges/30-data-types/problem)
 
