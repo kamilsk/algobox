@@ -18,7 +18,7 @@
 
 ##### Advanced Algorithms and Complexity
 
-##### Algorithmic Toolbox
+##### [Algorithmic Toolbox](coursera/algorithmic-toolbox)
 
 ##### Algorithms on Graphs
 
