@@ -18,5 +18,4 @@ def calc_fib(n: int):
 
 
 if __name__ == '__main__':
-    print(calc_fib_naive(int(input())))
     print(calc_fib(int(input())))
