@@ -9,7 +9,7 @@ import (
 
 func maxPairwiseProduct(numbers []int64) int64 {
 	var (
-		local int64
+		local      int64
 		idx1, idx2 int
 	)
 	local, idx1 = 0, -1
