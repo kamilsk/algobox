@@ -1,12 +1,13 @@
 # python3
-def fibonacci_partial_sum_naive(m: int, n: int):
-    total = 0
+def fibonacci_sum_squares_naive(n: int):
+    if n <= 1:
+        return n
 
     previous, current = 0, 1
-    for i in range(n + 1):
-        if i >= m:
-            total += previous
+    total = previous + current
+    for _ in range(n - 1):
         previous, current = current, previous + current
+        total += current * current
 
     return total % 10
 
@@ -28,13 +29,10 @@ def get_fibonacci_huge(n: int, m: int):
     return current % m
 
 
-def fibonacci_partial_sum(m: int, n: int):
-    # sum(fm-1) = fm+1 - f1
-    # sum(fn) = fn+2 - f1 (see the previous solution)
-    # partial sum(fm...fn) = sum(fn) - sum(fm-1) = fn+2 - fm+1
-    subset, full = get_fibonacci_huge(m + 1, 10), get_fibonacci_huge(n + 2, 10)
-    return full - subset if full > subset else (10 - subset + full) % 10
+def fibonacci_sum_squares(n: int):
+    # sum(fn^2) = fn*fn+1 (see the picture at the notes.pdf)
+    return get_fibonacci_huge(n, 10) * get_fibonacci_huge(n + 1, 10) % 10
 
 
 if __name__ == '__main__':
-    print(fibonacci_partial_sum(*map(int, input().split())))
+    print(fibonacci_sum_squares(int(input())))
