@@ -14,34 +14,33 @@ def timeit(method):
     return timed
 
 
-def get_fibonacci_huge_naive(x: int, y: int):
-    if x <= 1:
-        return x
+def get_fibonacci_huge_naive(n: int, m: int):
+    if n <= 1:
+        return n
 
     previous, current = 0, 1
-    for _ in range(x - 1):
+    for _ in range(n - 1):
         previous, current = current, previous + current
 
-    return current % y
+    return current % m
 
 
-def get_fibonacci_huge(x: int, y: int):
+def get_fibonacci_huge(n: int, m: int):
     pisano = list()
     pisano.append(0)
     pisano.append(1)
 
     previous, current, last = 0, 1, 2
-    for i in range(x - 1):
+    for i in range(n - 1):
         previous, current = current, previous + current
-        pisano.append(current % y)
+        pisano.append(current % m)
         for step in range(last, len(pisano) // 2):
             if pisano[:step] == pisano[step:2 * step]:
-                return pisano[x % step]
+                return pisano[n % step]
             last = step
 
-    return current % y
+    return current % m
 
 
 if __name__ == '__main__':
-    n, m = map(int, input().split())
-    print(get_fibonacci_huge(n, m))
+    print(get_fibonacci_huge(*map(int, input().split())))

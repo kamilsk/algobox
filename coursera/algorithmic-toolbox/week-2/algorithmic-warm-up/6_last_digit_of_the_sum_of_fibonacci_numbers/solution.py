@@ -27,21 +27,21 @@ def fibonacci_sum_naive(n: int):
     return total % 10
 
 
-def get_fibonacci_huge(x: int, y: int):
+def get_fibonacci_huge(n: int, m: int):
     pisano = list()
     pisano.append(0)
     pisano.append(1)
 
     previous, current, last = 0, 1, 2
-    for i in range(x - 1):
+    for i in range(n - 1):
         previous, current = current, previous + current
-        pisano.append(current % y)
+        pisano.append(current % m)
         for step in range(last, len(pisano) // 2):
             if pisano[:step] == pisano[step:2 * step]:
-                return pisano[x % step]
+                return pisano[n % step]
             last = step
 
-    return current % y
+    return current % m
 
 
 def fibonacci_sum(n: int):
