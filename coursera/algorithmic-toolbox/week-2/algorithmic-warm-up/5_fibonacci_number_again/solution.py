@@ -31,13 +31,13 @@ def get_fibonacci_huge(n: int, m: int):
     pisano.append(1)
 
     previous, current, last = 0, 1, 2
-    for i in range(n - 1):
+    for _ in range(n - 1):
         previous, current = current, previous + current
         pisano.append(current % m)
         for step in range(last, len(pisano) // 2):
             if pisano[:step] == pisano[step:2 * step]:
                 return pisano[n % step]
-            last = step
+            last = step + 1
 
     return current % m
 

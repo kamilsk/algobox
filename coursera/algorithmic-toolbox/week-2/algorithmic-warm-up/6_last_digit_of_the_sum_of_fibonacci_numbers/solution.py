@@ -39,7 +39,7 @@ def get_fibonacci_huge(n: int, m: int):
         for step in range(last, len(pisano) // 2):
             if pisano[:step] == pisano[step:2 * step]:
                 return pisano[n % step]
-            last = step
+            last = step + 1
 
     return current % m
 

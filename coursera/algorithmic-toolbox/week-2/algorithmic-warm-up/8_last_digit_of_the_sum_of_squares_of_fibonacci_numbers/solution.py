@@ -24,12 +24,15 @@ def get_fibonacci_huge(n: int, m: int):
         for step in range(last, len(pisano) // 2):
             if pisano[:step] == pisano[step:2 * step]:
                 return pisano[n % step]
-            last = step
+            last = step + 1
 
     return current % m
 
 
 def fibonacci_sum_squares(n: int):
+    if n == 0:
+        return 0
+
     # sum(fn^2) = fn*fn+1 (see the picture at the notes.pdf)
     return get_fibonacci_huge(n, 10) * get_fibonacci_huge(n + 1, 10) % 10
 

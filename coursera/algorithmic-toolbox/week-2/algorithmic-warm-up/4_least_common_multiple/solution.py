@@ -21,5 +21,4 @@ def lcm(a: int, b: int):
 
 
 if __name__ == '__main__':
-    n, m = map(int, input().split())
-    print(lcm(n, m))
+    print(lcm(*map(int, input().split())))

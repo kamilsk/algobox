@@ -20,5 +20,4 @@ def gcd(a: int, b: int):
 
 
 if __name__ == "__main__":
-    n, m = map(int, input().split())
-    print(gcd(n, m))
+    print(gcd(*map(int, input().split())))
