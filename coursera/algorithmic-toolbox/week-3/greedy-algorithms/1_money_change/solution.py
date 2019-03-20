@@ -1,10 +1,11 @@
-# Uses python3
-import sys
+# python3
+def get_change(m: int):
+    coins, pars = 0, [10, 5, 1]
+    for par in pars:
+        coins += m // par
+        m %= par
+    return coins
 
-def get_change(m):
-    #write your code here
-    return m
 
 if __name__ == '__main__':
-    m = int(sys.stdin.read())
-    print(get_change(m))
+    print(get_change(int(input())))
