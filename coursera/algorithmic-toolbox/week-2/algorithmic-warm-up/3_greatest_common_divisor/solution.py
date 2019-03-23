@@ -19,5 +19,5 @@ def gcd(a: int, b: int):
     return gcd(b, a % b)
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     print(gcd(*map(int, input().split())))
