@@ -2,7 +2,7 @@
 from typing import List
 
 
-def get_optimal_value(cap: int, loots: List[tuple]) -> int:
+def get_optimal_value(cap: int, loots: List[tuple]) -> float:
     optimal = 0.0
 
     loots = sorted(loots, key=lambda x: x[0] / x[1], reverse=True)
