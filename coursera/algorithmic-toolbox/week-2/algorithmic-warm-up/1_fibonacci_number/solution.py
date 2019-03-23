@@ -1,12 +1,12 @@
 # python3
-def calc_fib_naive(n: int):
+def calc_fib_naive(n: int) -> int:
     if n <= 1:
         return n
 
     return calc_fib_naive(n - 1) + calc_fib_naive(n - 2)
 
 
-def calc_fib(n: int):
+def calc_fib(n: int) -> int:
     memo = list()
     memo.append(0)
     memo.append(1)

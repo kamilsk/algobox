@@ -1,5 +1,5 @@
 # python3
-def gcd_naive(a: int, b: int):
+def gcd_naive(a: int, b: int) -> int:
     current_gcd = 1
 
     for d in range(2, min(a, b) + 1):
@@ -10,7 +10,7 @@ def gcd_naive(a: int, b: int):
     return current_gcd
 
 
-def gcd(a: int, b: int):
+def gcd(a: int, b: int) -> int:
     if b == 0:
         return a
 

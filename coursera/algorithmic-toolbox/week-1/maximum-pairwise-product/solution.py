@@ -1,5 +1,8 @@
 # python3
-def max_pairwise_product(numbers: list):
+from typing import List
+
+
+def max_pairwise_product(numbers: List[int]) -> int:
     local, idx1 = 0, -1
     for k, v in enumerate(numbers):
         if v >= local:

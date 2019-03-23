@@ -1,5 +1,5 @@
 # python3
-def fibonacci_partial_sum_naive(m: int, n: int):
+def fibonacci_partial_sum_naive(m: int, n: int) -> int:
     total = 0
 
     previous, current = 0, 1
@@ -11,7 +11,7 @@ def fibonacci_partial_sum_naive(m: int, n: int):
     return total % 10
 
 
-def get_fibonacci_huge(n: int, m: int):
+def get_fibonacci_huge(n: int, m: int) -> int:
     pisano = list()
     pisano.append(0)
     pisano.append(1)
@@ -28,7 +28,7 @@ def get_fibonacci_huge(n: int, m: int):
     return current % m
 
 
-def fibonacci_partial_sum(m: int, n: int):
+def fibonacci_partial_sum(m: int, n: int) -> int:
     # sum(fm-1) = fm+1 - f1
     # sum(fn) = fn+2 - f1 (see the previous solution)
     # partial sum(fm...fn) = sum(fn) - sum(fm-1) = fn+2 - fm+1

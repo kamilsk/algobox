@@ -4,7 +4,7 @@ from typing import List
 from unittest import TestCase
 
 
-def compute_min_refills(distance: int, tank: int, points: List[int]):
+def compute_min_refills(distance: int, tank: int, points: List[int]) -> int:
     points.insert(0, 0)
     if distance != points[-1]:
         points.append(distance)

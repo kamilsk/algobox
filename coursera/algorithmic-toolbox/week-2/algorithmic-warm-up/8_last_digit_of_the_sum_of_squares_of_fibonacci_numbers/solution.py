@@ -1,5 +1,5 @@
 # python3
-def fibonacci_sum_squares_naive(n: int):
+def fibonacci_sum_squares_naive(n: int) -> int:
     if n <= 1:
         return n
 
@@ -12,7 +12,7 @@ def fibonacci_sum_squares_naive(n: int):
     return total % 10
 
 
-def get_fibonacci_huge(n: int, m: int):
+def get_fibonacci_huge(n: int, m: int) -> int:
     pisano = list()
     pisano.append(0)
     pisano.append(1)
@@ -29,7 +29,7 @@ def get_fibonacci_huge(n: int, m: int):
     return current % m
 
 
-def fibonacci_sum_squares(n: int):
+def fibonacci_sum_squares(n: int) -> int:
     if n == 0:
         return 0
 

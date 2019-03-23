@@ -1,5 +1,5 @@
 # python3
-def sum_of_two_digits(first: int, second: int):
+def sum_of_two_digits(first: int, second: int) -> int:
     return first + second
 
 

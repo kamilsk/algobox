@@ -1,5 +1,5 @@
 # python3
-def get_change(m: int):
+def get_change(m: int) -> int:
     coins, pars = 0, [10, 5, 1]
     for par in pars:
         coins += m // par
