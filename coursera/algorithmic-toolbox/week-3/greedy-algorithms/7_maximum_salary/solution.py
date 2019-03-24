@@ -22,11 +22,8 @@ def largest_number(a: List[str]):
 def greater_or_equal(a: str, b: str) -> bool:
     la, lb = len(a), len(b)
 
-    if la < lb and b.startswith(a):
-        b = b[b.rindex(a) + la:]
-
-    if lb < la and a.startswith(b):
-        a = a[a.rindex(b) + lb:]
+    if la != lb:
+        return a + b >= b + a
 
     return a >= b
 
@@ -37,7 +34,6 @@ class Test(TestCase):
             {'a': ['21', '2'], 'expected': '221'},
             {'a': ['9', '4', '6', '1', '9'], 'expected': '99641'},
             {'a': ['23', '39', '92'], 'expected': '923923'},
-            # Failed case #10/11: Wrong answer
         ]
         for test in tests:
             expected, obtained = test['expected'], largest_number(test['a'])
