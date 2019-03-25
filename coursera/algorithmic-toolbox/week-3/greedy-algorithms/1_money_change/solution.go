@@ -7,8 +7,9 @@ import (
 	"strconv"
 )
 
-func getChange(m int64) int64 {
-	coins, pars := int64(0), []int64{10, 5, 1}
+func change(m int64) int64 {
+	var coins int64
+	pars := []int64{10, 5, 1}
 	for _, par := range pars {
 		coins += m / par
 		m %= par
@@ -22,7 +23,7 @@ func main() {
 
 	_ = scanner.Scan()
 	n, _ := strconv.ParseInt(scanner.Text(), 10, 64)
-	safe(fmt.Fprintln(os.Stdout, getChange(n)))
+	safe(fmt.Fprintln(os.Stdout, change(n)))
 }
 
 func safe(interface{}, error) {}
