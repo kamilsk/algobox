@@ -1,11 +1,10 @@
 # python3
 from collections import namedtuple
-from unittest import TestCase
-
 from sys import stdin
 from typing import List
+from unittest import TestCase
 
-testCase = namedtuple('test', 'where what expected')
+test = namedtuple('test', 'where what expected')
 
 
 def binary_search(where: List[int], what: int) -> int:
@@ -24,14 +23,17 @@ def binary_search(where: List[int], what: int) -> int:
 class Test(TestCase):
     def test_binary_search(self):
         tests = [
-            testCase([1, 5, 8, 12, 13], [8, 1, 23, 1, 11], [2, 0, -1, 0, -1]),
-            testCase([1, 2, 3, 4, 5], [1, 2, 3, 4, 5], [0, 1, 2, 3, 4]),
+            # samples
+            test([1, 5, 8, 12, 13], [8, 1, 23, 1, 11], [2, 0, -1, 0, -1]),
+
+            # acceptance
+            test([1, 2, 3, 4, 5], [1, 2, 3, 4, 5], [0, 1, 2, 3, 4]),
         ]
-        for test in tests:
+        for t in tests:
             obtained = []
-            for what in test.what:
-                obtained.append(binary_search(test.where, what))
-            self.assertEqual(test.expected, obtained)
+            for what in t.what:
+                obtained.append(binary_search(t.where, what))
+            self.assertEqual(t.expected, obtained)
 
 
 if __name__ == '__main__':
