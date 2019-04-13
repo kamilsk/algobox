@@ -29,11 +29,11 @@ class Test(TestCase):
             # acceptance
             test([1, 2, 3, 4, 5], [1, 2, 3, 4, 5], [0, 1, 2, 3, 4]),
         ]
-        for t in tests:
+        for i, t in enumerate(tests):
             obtained = []
             for what in t.what:
                 obtained.append(binary_search(t.where, what))
-            self.assertEqual(t.expected, obtained)
+            self.assertEqual(t.expected, obtained, msg='at {} position'.format(i))
 
 
 if __name__ == '__main__':
