@@ -10,23 +10,23 @@ test = namedtuple('test', 'votes expected')
 
 
 def majority_element(votes: List[int], left: int, right: int) -> (int, int):
-    if left is right:
+    if left == right:
         return -1, 0
-    if left + 1 is right:
+    if left + 1 == right:
         return votes[left], 1
 
     control = (right - left) // 2
     middle = (left + right) // 2
 
     ml, cl = majority_element(votes, left, middle)
-    if ml is not -1:
-        cl += reduce(lambda count, x: count if x is not ml else count + 1, votes[middle:right], 0)
+    if ml != -1:
+        cl += reduce(lambda count, x: count if x != ml else count + 1, votes[middle:right], 0)
         if cl > control:
             return ml, cl
 
     mr, cr = majority_element(votes, middle, right)
-    if mr is not -1:
-        cr += reduce(lambda count, x: count if x is not mr else count + 1, votes[left:middle], 0)
+    if mr != -1:
+        cr += reduce(lambda count, x: count if x != mr else count + 1, votes[left:middle], 0)
         if cr > control:
             return mr, cr
 
@@ -183,4 +183,4 @@ class Test(TestCase):
 
 if __name__ == '__main__':
     n, *a = list(map(int, stdin.read().split()))
-    print(0 if majority_element_control(a, 0, n)[0] is -1 else 1)
+    print(0 if majority_element(a, 0, n)[0] == -1 else 1)
