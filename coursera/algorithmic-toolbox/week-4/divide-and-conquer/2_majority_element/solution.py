@@ -166,9 +166,8 @@ class Test(TestCase):
 
     def test_stress(self):
         while True:
-            # 1 <= n <= 10^5, 0 <= ai <= 10^9
             votes = []
-            count = randint(1, pow(10, 3))
+            count = randint(1, pow(10, 5))
             for i in range(count):
                 votes.append(randint(0, pow(10, 9)))
 
