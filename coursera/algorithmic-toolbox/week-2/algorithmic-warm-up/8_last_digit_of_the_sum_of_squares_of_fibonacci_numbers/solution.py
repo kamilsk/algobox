@@ -33,7 +33,7 @@ def fibonacci_sum_squares(n: int) -> int:
     if n == 0:
         return 0
 
-    # sum(fn^2) = fn*fn+1 (see the picture at the notes.pdf)
+    # sum(fn^2) = fn*fn+1 (see the picture at the problems.pdf)
     return get_fibonacci_huge(n, 10) * get_fibonacci_huge(n + 1, 10) % 10
 
 
