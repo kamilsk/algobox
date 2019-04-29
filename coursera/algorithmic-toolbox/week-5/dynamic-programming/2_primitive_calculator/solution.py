@@ -33,6 +33,7 @@ def optimal_sequence(size: int) -> List[int]:
 class Test(TestCase):
     def test_optimal_sequence(self):
         tests = [
+            # samples
             test(1, [1]),
             test(5, [1, 2, 4, 5]),
             test(96234, [1, 3, 9, 10, 11, 22, 66, 198, 594, 1782, 5346, 16038, 16039, 32078, 96234]),
