@@ -1,8 +1,13 @@
-> # algo
+> # algobox
 >
 > 👨‍💻 My progress in courses related to computer science, algorithms, and data structures.
 
-## Challenges
+## Disclaimer 🙅‍♂️
+
+The main purpose of this repository is to help recruiters and/or technical specialists to validate my skills
+and competence. So, I do not recommend to use the solutions presented here as a crib.
+
+## Challenges 🧗‍♂️
 
 ### [HackerRank](https://www.hackerrank.com/kamilsk)
 
@@ -10,7 +15,7 @@
 
 #### [Problem Solving](hackerrank/algorithms)
 
-## Courses
+## Courses 👨‍🏫
 
 ### [Coursera](https://www.coursera.org/user/ac851392243e4a64c5a04b6bfe2b97cc)
 
@@ -38,7 +43,7 @@
 
 ##### [Операционные системы](stepik/course-1780)
 
-## Useful
+## Useful 💁‍♂️
 
 - [Algojammer](https://github.com/ChrisKnott/Algojammer)
 - [Sorting Algorithms Animations](https://www.toptal.com/developers/sorting-algorithms)
