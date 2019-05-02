@@ -1,6 +1,6 @@
-> # algobox
+> # 👨‍💻 algobox
 >
-> 👨‍💻 My progress in courses related to computer science, algorithms, and data structures.
+> My progress in courses related to computer science, algorithms, and data structures.
 
 ## 🙅‍♂️ Disclaimer
 
@@ -19,17 +19,17 @@ and competence. So, I do not recommend to use the solutions presented here as a 
 
 ### [Coursera](https://www.coursera.org/user/ac851392243e4a64c5a04b6bfe2b97cc)
 
-#### Data Structures and Algorithms
-
-##### Advanced Algorithms and Complexity
+#### [Data Structures and Algorithms](https://www.coursera.org/specializations/data-structures-algorithms)
 
 ##### [Algorithmic Toolbox](coursera/algorithmic-toolbox)
+
+##### Data Structures
 
 ##### Algorithms on Graphs
 
 ##### Algorithms on Strings
 
-##### Data Structures
+##### Advanced Algorithms and Complexity
 
 ##### Genome Assembly Programming Challenge
 
