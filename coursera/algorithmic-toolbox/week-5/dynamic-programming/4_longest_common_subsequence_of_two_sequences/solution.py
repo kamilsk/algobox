@@ -22,7 +22,7 @@ def lcs2(seq_a: List[int], seq_b: List[int]) -> int:
 
 
 class Test(TestCase):
-    def test_change(self):
+    def test_lcs2(self):
         tests = [
             # samples
             test([2, 7, 5], [2, 5], 2),
@@ -38,7 +38,6 @@ class Test(TestCase):
 
 if __name__ == '__main__':
     data = list(map(int, stdin.read().split()))
-
     an = data[0]
     data = data[1:]
     a = data[:an]
