@@ -8,7 +8,7 @@ from unittest import TestCase
 test = namedtuple('test', 'souvenirs expected')
 
 
-def partition3_naive(souvenirs: List[int]) -> bool:
+def naive_partition3(souvenirs: List[int]) -> bool:
     for c in product(range(3), repeat=len(souvenirs)):
         sums = [0] * 3
         for i in range(3):
@@ -20,7 +20,7 @@ def partition3_naive(souvenirs: List[int]) -> bool:
     return False
 
 
-def partition3(souvenirs: List[int]) -> bool:
+def fast_partition3(souvenirs: List[int]) -> bool:
     if sum(souvenirs) % 3 != 0:
         return False
 
@@ -37,9 +37,9 @@ class Test(TestCase):
             test([1, 2, 3, 4, 5, 5, 7, 7, 8, 10, 12, 19, 25], True),
         ]
         for i, t in enumerate(tests):
-            self.assertEqual(t.expected, partition3(t.souvenirs), msg='at {} position'.format(i))
+            self.assertEqual(t.expected, naive_partition3(t.souvenirs), msg='at {} position'.format(i))
 
 
 if __name__ == '__main__':
     _, *A = list(map(int, stdin.read().split()))
-    print(1 if partition3_naive(A) else 0)
+    print(1 if naive_partition3(A) else 0)

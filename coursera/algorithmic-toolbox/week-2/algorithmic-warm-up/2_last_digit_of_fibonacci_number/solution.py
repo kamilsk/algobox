@@ -1,5 +1,5 @@
 # python3
-def get_fibonacci_last_digit_naive(n: int) -> int:
+def naive_fibonacci_last_digit(n: int) -> int:
     if n <= 1:
         return n
 
@@ -10,7 +10,7 @@ def get_fibonacci_last_digit_naive(n: int) -> int:
     return current % 10
 
 
-def get_fibonacci_last_digit(n: int) -> int:
+def fast_fibonacci_last_digit(n: int) -> int:
     if n <= 1:
         return n
 
@@ -22,4 +22,4 @@ def get_fibonacci_last_digit(n: int) -> int:
 
 
 if __name__ == '__main__':
-    print(get_fibonacci_last_digit(int(input())))
+    print(fast_fibonacci_last_digit(int(input())))

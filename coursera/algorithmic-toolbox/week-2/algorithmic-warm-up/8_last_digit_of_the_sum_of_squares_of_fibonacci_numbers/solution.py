@@ -1,5 +1,5 @@
 # python3
-def fibonacci_sum_squares_naive(n: int) -> int:
+def naive_fibonacci_sum_squares(n: int) -> int:
     if n <= 1:
         return n
 
@@ -12,7 +12,7 @@ def fibonacci_sum_squares_naive(n: int) -> int:
     return total % 10
 
 
-def get_fibonacci_huge(n: int, m: int) -> int:
+def fast_fibonacci_huge(n: int, m: int) -> int:
     pisano = list()
     pisano.append(0)
     pisano.append(1)
@@ -29,13 +29,13 @@ def get_fibonacci_huge(n: int, m: int) -> int:
     return current % m
 
 
-def fibonacci_sum_squares(n: int) -> int:
+def fast_fibonacci_sum_squares(n: int) -> int:
     if n == 0:
         return 0
 
     # sum(fn^2) = fn*fn+1 (see the picture at the problems.pdf)
-    return get_fibonacci_huge(n, 10) * get_fibonacci_huge(n + 1, 10) % 10
+    return fast_fibonacci_huge(n, 10) * fast_fibonacci_huge(n + 1, 10) % 10
 
 
 if __name__ == '__main__':
-    print(fibonacci_sum_squares(int(input())))
+    print(fast_fibonacci_sum_squares(int(input())))

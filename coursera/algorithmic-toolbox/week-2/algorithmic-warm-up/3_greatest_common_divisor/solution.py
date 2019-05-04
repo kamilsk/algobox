@@ -1,5 +1,5 @@
 # python3
-def gcd_naive(a: int, b: int) -> int:
+def naive_gcd(a: int, b: int) -> int:
     current_gcd = 1
 
     for d in range(2, min(a, b) + 1):
@@ -10,14 +10,14 @@ def gcd_naive(a: int, b: int) -> int:
     return current_gcd
 
 
-def gcd(a: int, b: int) -> int:
+def fast_gcd(a: int, b: int) -> int:
     if b == 0:
         return a
 
     if a < b:
-        return gcd(a, b % a)
-    return gcd(b, a % b)
+        return fast_gcd(a, b % a)
+    return fast_gcd(b, a % b)
 
 
 if __name__ == '__main__':
-    print(gcd(*map(int, input().split())))
+    print(fast_gcd(*map(int, input().split())))

@@ -14,7 +14,7 @@ def timeit(method):
     return timed
 
 
-def get_fibonacci_huge_naive(n: int, m: int) -> int:
+def naive_fibonacci_huge(n: int, m: int) -> int:
     if n <= 1:
         return n
 
@@ -25,7 +25,7 @@ def get_fibonacci_huge_naive(n: int, m: int) -> int:
     return current % m
 
 
-def get_fibonacci_huge(n: int, m: int) -> int:
+def fast_fibonacci_huge(n: int, m: int) -> int:
     pisano = list()
     pisano.append(0)
     pisano.append(1)
@@ -43,4 +43,4 @@ def get_fibonacci_huge(n: int, m: int) -> int:
 
 
 if __name__ == '__main__':
-    print(get_fibonacci_huge(*map(int, input().split())))
+    print(fast_fibonacci_huge(*map(int, input().split())))

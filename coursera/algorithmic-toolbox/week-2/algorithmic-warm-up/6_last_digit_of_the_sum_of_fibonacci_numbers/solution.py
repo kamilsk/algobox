@@ -14,7 +14,7 @@ def timeit(method):
     return timed
 
 
-def fibonacci_sum_naive(n: int) -> int:
+def naive_fibonacci_sum(n: int) -> int:
     if n <= 1:
         return n
 
@@ -27,7 +27,7 @@ def fibonacci_sum_naive(n: int) -> int:
     return total % 10
 
 
-def get_fibonacci_huge(n: int, m: int) -> int:
+def fast_fibonacci_huge(n: int, m: int) -> int:
     pisano = list()
     pisano.append(0)
     pisano.append(1)
@@ -44,15 +44,15 @@ def get_fibonacci_huge(n: int, m: int) -> int:
     return current % m
 
 
-def fibonacci_sum(n: int) -> int:
+def fast_fibonacci_sum(n: int) -> int:
     # f0 = f2 - f1
     # f1 = f3 - f2
     # ...
     # fn = fn+2 - fn+1
     # sum(fn) = fn+2 - f1
-    last = get_fibonacci_huge(n + 2, 10)
+    last = fast_fibonacci_huge(n + 2, 10)
     return last - 1 if last > 0 else 9
 
 
 if __name__ == '__main__':
-    print(fibonacci_sum(int(input())))
+    print(fast_fibonacci_sum(int(input())))
