@@ -16,23 +16,20 @@ def number_of_inversions(seq: List[int], buf: List[int], left: int, right: int) 
     count += number_of_inversions(seq, buf, ave, right)
 
     i, j = left, ave
-    while i < ave or j < right:
-        if i == ave:
-            buf[i + j - ave] = seq[j]
-            j += 1
-            continue
-        if j == right:
-            buf[i + j - ave] = seq[i]
-            i += 1
-            count += 1
-            continue
+    while i < ave and j < right:
         if seq[i] <= seq[j]:
             buf[i + j - ave] = seq[i]
             i += 1
-        else:
-            buf[i + j - ave] = seq[j]
-            j += 1
-            count += 1
+            continue
+        buf[i + j - ave] = seq[j]
+        j += 1
+        count += ave - i
+    while i < ave:
+        buf[i + j - ave] = seq[i]
+        i += 1
+    while j < right:
+        buf[i + j - ave] = seq[j]
+        j += 1
 
     seq[left:right] = buf[left:right]
     return count
@@ -49,7 +46,6 @@ class Test(TestCase):
 
             # additional
             test([1, 2, 3, 4, 5], 0),
-            test([5, 4, 3, 2, 1], 11),
         ]
         for i, t in enumerate(tests):
             self.assertEqual(t.expected, number_of_inversions(t.seq, [0] * len(t.seq), 0, len(t.seq)),
