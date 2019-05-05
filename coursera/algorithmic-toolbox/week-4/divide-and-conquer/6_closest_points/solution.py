@@ -14,18 +14,24 @@ test = namedtuple('test', 'x y expected')
 def naive_minimum_distance(x: List[int], y: List[int]) -> float:
     points = [point(x[i], y[i]) for i in range(len(x))]
 
+    p1, p2 = None, None
     count, best = len(points), distance(point(-10 ** 9, -10 ** 9), point(10 ** 9, 10 ** 9))
     for i in range(count):
         for j in range(i + 1, count):
-            best = min(best, distance(points[i], points[j]))
+            d = distance(points[i], points[j])
+            if best > d:
+                best = d
+                p1, p2 = points[i], points[j]
 
-    return best
+    return distance(p1, p2)
 
 
 def fast_minimum_distance(x: List[int], y: List[int]) -> float:
     points = [point(x[i], y[i]) for i in range(len(x))]
     points.sort()
-    return distance(*closest_pair(points))
+
+    p1, p2 = closest_pair(points)
+    return distance(p1, p2)
 
 
 def distance(p1: point, p2: point) -> Optional[float]:
@@ -60,8 +66,9 @@ def choose(points: List[pair]) -> pair:
 
 
 def closest_split_pair(points: List[point], delta: float) -> pair:
-    p1, p2 = None, None
+    points.sort(key=lambda x: x.y)
 
+    p1, p2 = None, None
     count, best = len(points), delta
     for i in range(count):
         for j in range(i + 1, count):
@@ -69,6 +76,7 @@ def closest_split_pair(points: List[point], delta: float) -> pair:
             if best is None:
                 best = d
                 p1, p2 = points[i], points[j]
+                continue
             if points[j].y - points[i].y >= best:
                 break
             if best > d:
@@ -87,11 +95,12 @@ class Test(TestCase):
             test([4, -2, -3, -1, 2, -4, 1, -1, 3, -4, -2], [4, -2, -4, 3, 3, 0, 1, -1, -1, 2, 4], 1.414213),
 
             # stress
+            test([9, 9, 9, 0, 10, -3], [8, 0, 5, -4, 0, -8], 1.0),
             test([-127678177, -331970333, -800285983, -314341947, 233375965, -812839577, 322317687, -813575754,
                   304407788, 271791828, 391444914, 57930264, -547266271, -100947032, 980647496],
                  [-598319026, -950101333, -928393983, 522743622, 430981688, 436461075, -424578224, -396917943,
                   637314539, -383018865, -284424151, -319904913, 843840201, 855896685, 374328039],
-                 65422035.646858)
+                 65422035.646858),
         ]
         for i, t in enumerate(tests):
             self.assertEqual(t.expected, int(10 ** 6 * fast_minimum_distance(t.x, t.y)) / 10 ** 6,
@@ -100,12 +109,15 @@ class Test(TestCase):
     def test_stress(self):
         while True:
             points = []
-            for i in range(2 * randint(1, 100)):
-                points.append(randint(-pow(10, 9), pow(10, 9)))
+            for i in range(2 * randint(2, 100)):
+                points.append(randint(-pow(10, 2), pow(10, 2)))
             x, y = points[0::2], points[1::2]
-            expected = '{0:.9f}'.format(naive_minimum_distance(x, y))
-            obtained = '{0:.9f}'.format(fast_minimum_distance(x, y))
-            if expected != obtained:
+            try:
+                expected = '{0:.9f}'.format(naive_minimum_distance(x, y))
+                obtained = '{0:.9f}'.format(fast_minimum_distance(x, y))
+                if expected != obtained:
+                    self.fail(msg='failed on input ({}, {})'.format(x, y))
+            except (RuntimeError, TypeError) as e:
                 self.fail(msg='failed on input ({}, {})'.format(x, y))
 
 
