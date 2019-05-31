@@ -23,7 +23,7 @@ and competence. So, I do not recommend to use the solutions presented here as a 
 
 ##### [Algorithmic Toolbox](coursera/algorithmic-toolbox)
 
-##### Data Structures
+##### [Data Structures](coursera/data-structures)
 
 ##### Algorithms on Graphs
 
