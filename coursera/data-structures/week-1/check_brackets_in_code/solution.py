@@ -3,7 +3,7 @@ from collections import namedtuple
 from typing import Optional
 from unittest import TestCase
 
-bracket = namedtuple('bracket', ['char', 'position'])
+bracket = namedtuple('bracket', 'char position')
 test = namedtuple('test', 'text expected')
 
 
