@@ -63,7 +63,7 @@ class LinkedList:
 
 
 class Query:
-    def __init__(self, query):
+    def __init__(self, query: List[str]):
         self.type, self.phone = query[0], int(query[1])
         if self.type == 'add':
             self.name = query[2]
@@ -85,10 +85,10 @@ class PhoneBook:
         result = []
 
         for query in [Query(query.split()) for query in queries]:
-            hh = self.__hash(query.phone)
-            if self.__storage[hh] is None:
-                self.__storage[hh] = LinkedList(lambda x, y: x.phone == y.phone)
-            ll = self.__storage[hh]
+            h = self.__hash(query.phone)
+            if self.__storage[h] is None:
+                self.__storage[h] = LinkedList(lambda x, y: x.phone == y.phone)
+            ll = self.__storage[h]
 
             if query.type == 'add':
                 ll.add(contact(query.phone, query.name))
@@ -149,7 +149,7 @@ class Test(TestCase):
             ]),
         ]
         for i, t in enumerate(tests):
-            self.assertEqual(t.expected, PhoneBook().process(t.commands))
+            self.assertEqual(t.expected, PhoneBook().process(t.commands), msg='at {} position'.format(i))
 
 
 if __name__ == '__main__':
