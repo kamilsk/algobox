@@ -1,8 +1,10 @@
 # python3
+
 from collections import namedtuple
 from sys import stdin
-from typing import List
 from unittest import TestCase
+
+from typing import List
 
 merge = namedtuple('merge', 'dst src expected')
 symlink = namedtuple('symlink', 'dst')

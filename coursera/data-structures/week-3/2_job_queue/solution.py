@@ -1,7 +1,9 @@
 # python3
+
 from collections import namedtuple
-from typing import List, Optional
 from unittest import TestCase
+
+from typing import List, Optional
 
 thread = namedtuple('thread', 'id start_at')
 test = namedtuple('test', 'threads jobs expected')

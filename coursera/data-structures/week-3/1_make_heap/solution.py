@@ -1,7 +1,9 @@
 # python3
+
 from collections import namedtuple
-from typing import List
 from unittest import TestCase
+
+from typing import List
 
 swap = namedtuple('swap', 'i j')
 test = namedtuple('test', 'data expected')
