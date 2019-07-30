@@ -1,7 +1,9 @@
 # python3
+
 from collections import namedtuple
-from typing import Optional
 from unittest import TestCase
+
+from typing import Optional
 
 bracket = namedtuple('bracket', 'char position')
 test = namedtuple('test', 'text expected')

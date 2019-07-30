@@ -1,14 +1,14 @@
 # python3
-# from __future__ import annotations
 
 from collections import namedtuple, deque
-from typing import List
 from unittest import TestCase
+
+from typing import List
 
 test = namedtuple('test', 'parents expected')
 
 
-class Node(object):
+class Node:
     def __init__(self):
         self.children = []
 
