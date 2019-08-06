@@ -16,9 +16,11 @@ test = namedtuple('test', 'input expected')
 class TreeOrders:
     def __init__(self):
         self.n = self.key = self.left = self.right = None
+        self.i = self.buf = None
 
     def read(self, src: IO):
         self.n = int(src.readline())
+        self.buf = [0 for _ in range(self.n)]
         self.key = [0 for _ in range(self.n)]
         self.left = [0 for _ in range(self.n)]
         self.right = [0 for _ in range(self.n)]
@@ -26,44 +28,45 @@ class TreeOrders:
             [self.key[i], self.left[i], self.right[i]] = map(int, src.readline().split())
         return self
 
-    def walk(self) -> List[str]:
-        return [
-            ' '.join(str(x) for x in self.in_order()),
-            ' '.join(str(x) for x in self.pre_order()),
-            ' '.join(str(x) for x in self.post_order()),
-        ]
-
-    def in_order(self, node=0) -> List[int]:
+    def walk(self) -> List[List[int]]:
         result = []
 
-        if self.left[node] != -1:
-            result += self.in_order(self.left[node])
-        result.append(self.key[node])
-        if self.right[node] != -1:
-            result += self.in_order(self.right[node])
+        for walk in [self.in_order, self.pre_order, self.post_order]:
+            self.i = 0
+            walk()
+            result.append(self.buf[:])
 
         return result
 
-    def pre_order(self, node=0) -> List[int]:
-        result = [self.key[node]]
+    def in_order(self, node=0):
+        if self.left[node] != -1:
+            self.in_order(self.left[node])
+
+        self.buf[self.i] = self.key[node]
+        self.i += 1
+
+        if self.right[node] != -1:
+            self.in_order(self.right[node])
+
+    def pre_order(self, node=0):
+        self.buf[self.i] = self.key[node]
+        self.i += 1
 
         if self.left[node] != -1:
-            result += self.pre_order(self.left[node])
+            self.pre_order(self.left[node])
+
         if self.right[node] != -1:
-            result += self.pre_order(self.right[node])
+            self.pre_order(self.right[node])
 
-        return result
-
-    def post_order(self, node=0) -> List[int]:
-        result = []
-
+    def post_order(self, node=0):
         if self.left[node] != -1:
-            result += self.post_order(self.left[node])
-        if self.right[node] != -1:
-            result += self.post_order(self.right[node])
-        result.append(self.key[node])
+            self.post_order(self.left[node])
 
-        return result
+        if self.right[node] != -1:
+            self.post_order(self.right[node])
+
+        self.buf[self.i] = self.key[node]
+        self.i += 1
 
 
 class Fake(IO, ABC):
@@ -74,43 +77,6 @@ class Fake(IO, ABC):
     def readline(self, limit: int = -1) -> AnyStr:
         self.__i += 1
         return self.__rows[self.__i]
-
-
-class Printer:
-    def __init__(self, tree: TreeOrders):
-        self.__tree = tree
-
-    def walk(self):
-        self.in_order()
-        self.pre_order()
-        self.post_order()
-
-    def in_order(self, node=0):
-        if self.__tree.left[node] != -1:
-            self.in_order(self.__tree.left[node])
-
-        print(self.__tree.key[node])
-
-        if self.__tree.right[node] != -1:
-            self.in_order(self.__tree.right[node])
-
-    def pre_order(self, node=0):
-        print(self.__tree.key[node])
-
-        if self.__tree.left[node] != -1:
-            self.pre_order(self.__tree.left[node])
-
-        if self.__tree.right[node] != -1:
-            self.pre_order(self.__tree.right[node])
-
-    def post_order(self, node=0):
-        if self.__tree.left[node] != -1:
-            self.post_order(self.__tree.left[node])
-
-        if self.__tree.right[node] != -1:
-            self.post_order(self.__tree.right[node])
-
-        print(self.__tree.key[node])
 
 
 class Test(TestCase):
@@ -146,13 +112,15 @@ class Test(TestCase):
             ]),
         ]
         for i, t in enumerate(tests):
-            self.assertEqual(t.expected, TreeOrders().read(Fake(t.input)).walk(), msg='at {} position'.format(i))
+            src = Fake(t.input)
+            self.assertEqual(t.expected,
+                             list(map(lambda way: ' '.join(str(step) for step in way), TreeOrders().read(src).walk())),
+                             msg='at {} position'.format(i))
 
 
 def main():
-    Printer(TreeOrders().read(stdin)).walk()
-    # for way in TreeOrders().read(stdin).walk():
-    #     print(way)
+    for way in TreeOrders().read(stdin).walk():
+        print(' '.join(str(step) for step in way))
 
 
 if __name__ == '__main__':
