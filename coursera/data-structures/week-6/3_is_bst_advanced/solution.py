@@ -10,6 +10,7 @@ from unittest import TestCase
 setrecursionlimit(10 ** 6)
 stack_size(2 ** 27)
 
+border = namedtuple('border', 'left right')
 test = namedtuple('test', 'input expected')
 
 
@@ -27,29 +28,31 @@ class TreeChecker:
             [self.key[i], self.left[i], self.right[i]] = map(int, src.readline().split())
         return self
 
-    def check(self) -> bool:
+    def check(self, node: int = 0, bound: border = border(-2 ** 31 - 1, 2 ** 31)) -> bool:
         if self.n < 2:
             return True
 
-        buf = [0 for _ in range(self.n)]
-        self.in_order(buf)
+        root = self.key[node]
 
-        for i in range(len(buf) - 1):
-            if buf[i] >= buf[i + 1]:
+        left = self.left[node]
+        if left != -1:
+            if self.key[left] >= root:
                 return False
+            if self.key[left] < bound.left:
+                return False
+            if not self.check(left, border(bound.left, root)):
+                return False
+
+        right = self.right[node]
+        if right != -1:
+            if self.key[right] < root:
+                return False
+            if self.key[right] >= bound.right:
+                return False
+            if not self.check(right, border(root, bound.right)):
+                return False
+
         return True
-
-    def in_order(self, buf: List[int], node: int = 0, position: int = 0) -> int:
-        if self.left[node] != -1:
-            position = self.in_order(buf, self.left[node], position)
-
-        buf[position] = self.key[node]
-        position += 1
-
-        if self.right[node] != -1:
-            position = self.in_order(buf, self.right[node], position)
-
-        return position
 
 
 class Fake(IO, ABC):
@@ -76,7 +79,18 @@ class Test(TestCase):
                 '2 -1 -1',
                 '3 -1 -1',
             ], False),
+            test([
+                '2 1 2',
+                '1 -1 -1',
+                '2 -1 -1',
+            ], True),
+            test([
+                '2 1 2',
+                '2 -1 -1',
+                '3 -1 -1',
+            ], False),
             test([], True),
+            test(['2147483647 -1 -1'], True),
             test([
                 '1 -1 1',
                 '2 -1 2',
@@ -93,11 +107,12 @@ class Test(TestCase):
                 '5 -1 -1',
                 '7 -1 -1',
             ], True),
+
+            # additional
             test([
                 '4 1 -1',
-                '2 2 3',
-                '1 -1 -1',
-                '5 -1 -1',
+                '2 -1 2',
+                '4 -1 -1',
             ], False),
         ]
         for i, t in enumerate(tests):

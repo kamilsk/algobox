@@ -36,7 +36,7 @@ class TreeOrders:
 
         return result
 
-    def in_order(self, buf: List[int], node=0, position=0) -> int:
+    def in_order(self, buf: List[int], node: int = 0, position: int = 0) -> int:
         if self.left[node] != -1:
             position = self.in_order(buf, self.left[node], position)
 
@@ -48,7 +48,7 @@ class TreeOrders:
 
         return position
 
-    def pre_order(self, buf: List[int], node=0, position=0) -> int:
+    def pre_order(self, buf: List[int], node: int = 0, position: int = 0) -> int:
         buf[position] = self.key[node]
         position += 1
 
@@ -60,7 +60,7 @@ class TreeOrders:
 
         return position
 
-    def post_order(self, buf: List[int], node=0, position=0) -> int:
+    def post_order(self, buf: List[int], node: int = 0, position: int = 0) -> int:
         if self.left[node] != -1:
             position = self.post_order(buf, self.left[node], position)
 
