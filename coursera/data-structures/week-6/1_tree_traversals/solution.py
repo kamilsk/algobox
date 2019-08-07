@@ -15,12 +15,11 @@ test = namedtuple('test', 'input expected')
 
 class TreeOrders:
     def __init__(self):
-        self.n = self.key = self.left = self.right = None
-        self.i = self.buf = None
+        self.n = 0
+        self.key = self.left = self.right = None
 
     def read(self, src: IO):
         self.n = int(src.readline())
-        self.buf = [0 for _ in range(self.n)]
         self.key = [0 for _ in range(self.n)]
         self.left = [0 for _ in range(self.n)]
         self.right = [0 for _ in range(self.n)]
@@ -29,44 +28,49 @@ class TreeOrders:
         return self
 
     def walk(self) -> List[List[int]]:
-        result = []
+        result, buf = [], [0 for _ in range(self.n)]
 
         for walk in [self.in_order, self.pre_order, self.post_order]:
-            self.i = 0
-            walk()
-            result.append(self.buf[:])
+            walk(buf)
+            result.append(buf[:])
 
         return result
 
-    def in_order(self, node=0):
+    def in_order(self, buf: List[int], node=0, position=0) -> int:
         if self.left[node] != -1:
-            self.in_order(self.left[node])
+            position = self.in_order(buf, self.left[node], position)
 
-        self.buf[self.i] = self.key[node]
-        self.i += 1
+        buf[position] = self.key[node]
+        position += 1
 
         if self.right[node] != -1:
-            self.in_order(self.right[node])
+            position = self.in_order(buf, self.right[node], position)
 
-    def pre_order(self, node=0):
-        self.buf[self.i] = self.key[node]
-        self.i += 1
+        return position
+
+    def pre_order(self, buf: List[int], node=0, position=0) -> int:
+        buf[position] = self.key[node]
+        position += 1
 
         if self.left[node] != -1:
-            self.pre_order(self.left[node])
+            position = self.pre_order(buf, self.left[node], position)
 
         if self.right[node] != -1:
-            self.pre_order(self.right[node])
+            position = self.pre_order(buf, self.right[node], position)
 
-    def post_order(self, node=0):
+        return position
+
+    def post_order(self, buf: List[int], node=0, position=0) -> int:
         if self.left[node] != -1:
-            self.post_order(self.left[node])
+            position = self.post_order(buf, self.left[node], position)
 
         if self.right[node] != -1:
-            self.post_order(self.right[node])
+            position = self.post_order(buf, self.right[node], position)
 
-        self.buf[self.i] = self.key[node]
-        self.i += 1
+        buf[position] = self.key[node]
+        position += 1
+
+        return position
 
 
 class Fake(IO, ABC):
