@@ -2,10 +2,9 @@
 
 from abc import ABC
 from collections import namedtuple
+from sys import stdin
 from typing import AnyStr, IO, List
 from unittest import TestCase
-
-from sys import stdin
 
 test = namedtuple('test', 'input expected')
 

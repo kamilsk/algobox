@@ -1,9 +1,8 @@
 # python3
 
 from collections import namedtuple
-from unittest import TestCase
-
 from typing import Optional
+from unittest import TestCase
 
 bracket = namedtuple('bracket', 'char position')
 test = namedtuple('test', 'text expected')
@@ -32,7 +31,7 @@ def find_mismatch(text: str) -> Optional[int]:
 
 
 class Test(TestCase):
-    def test_find_mismatch(self):
+    def test_brackets_in_code(self):
         tests = [
             # samples
             test('[]', None),

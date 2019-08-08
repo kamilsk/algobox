@@ -1,9 +1,8 @@
 # python3
 
 from collections import namedtuple, deque
-from unittest import TestCase
-
 from typing import List
+from unittest import TestCase
 
 test = namedtuple('test', 'parents expected')
 
@@ -45,7 +44,7 @@ def compute_height(parents: List[int]) -> int:
 
 
 class Test(TestCase):
-    def test_compute_height(self):
+    def test_tree_height(self):
         tests = [
             # samples
             test([4, -1, 4, 1, 1], 3),
