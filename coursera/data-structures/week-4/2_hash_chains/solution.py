@@ -1,15 +1,14 @@
 # python3
 
 from collections import namedtuple
+from typing import Any, List, Optional
 from unittest import TestCase
-
-from typing import List, Optional
 
 test = namedtuple('test', 'buckets commands expected')
 
 
 class Node:
-    def __init__(self, value):
+    def __init__(self, value: Any):
         self.next = self.prev = None
         self.value = value
 
@@ -18,7 +17,7 @@ class LinkedList:
     def __init__(self):
         self.head = self.tail = None
 
-    def add(self, value):
+    def add(self, value: Any):
         if self.tail is None:
             self.head = self.tail = Node(value)
             return
@@ -30,7 +29,7 @@ class LinkedList:
             return
         found.value = value
 
-    def remove(self, value):
+    def remove(self, value: Any):
         found = self.find(value)
         if found is None:
             return
@@ -48,7 +47,7 @@ class LinkedList:
             return
         p.next, n.prev = n, p
 
-    def find(self, value) -> Optional[Node]:
+    def find(self, value: Any) -> Optional[Node]:
         if self.head is None:
             return None
         found = self.head
@@ -73,11 +72,11 @@ class QueryProcessor:
     _prime = 1000000007
 
     def __init__(self, buckets: int):
-        self.__storage: List[Optional[LinkedList]] = [None] * buckets
+        self.__storage = [LinkedList() for _ in range(buckets)]
 
-    def __hash(self, s: str) -> int:
+    def __hash(self, string: str) -> int:
         bucket = 0
-        for c in reversed(s):
+        for c in reversed(string):
             bucket = (bucket * self._multiplier + ord(c)) % self._prime
         return bucket % len(self.__storage)
 
@@ -88,7 +87,7 @@ class QueryProcessor:
             if query.type == 'check':
                 ll = self.__storage[query.idx]
                 dump = ''
-                if ll is not None:
+                if ll.tail is not None:
                     buf, ptr = [], ll.tail
                     while ptr is not None:
                         buf.append(ptr.value)
@@ -98,8 +97,6 @@ class QueryProcessor:
                 continue
 
             h = self.__hash(query.str)
-            if self.__storage[h] is None:
-                self.__storage[h] = LinkedList()
             ll = self.__storage[h]
 
             if query.type == 'add':
@@ -116,7 +113,7 @@ class QueryProcessor:
 
 
 class Test(TestCase):
-    def test_query_processor(self):
+    def test_hash_chains(self):
         tests = [
             # samples
             test(5, [
@@ -159,8 +156,7 @@ class Test(TestCase):
             ], ['', 'no', 'yes', 'yes', 'no', '', 'add help', '']),
         ]
         for i, t in enumerate(tests):
-            self.assertEqual(t.expected, QueryProcessor(t.buckets).process(t.commands),
-                             msg='at {} position'.format(i))
+            self.assertEqual(t.expected, QueryProcessor(t.buckets).process(t.commands), msg='at {} position'.format(i))
 
 
 if __name__ == '__main__':

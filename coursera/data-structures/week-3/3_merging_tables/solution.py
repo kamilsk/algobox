@@ -2,16 +2,15 @@
 
 from collections import namedtuple
 from sys import stdin
-from unittest import TestCase
-
 from typing import List
+from unittest import TestCase
 
 merge = namedtuple('merge', 'dst src expected')
 symlink = namedtuple('symlink', 'dst')
 test = namedtuple('test', 'tables merges expected')
 
 
-class Storage(object):
+class Storage:
     def __init__(self, tables: List[int]):
         self._dsu = [symlink(0)]
         self._dsu.extend([i for i in tables])
@@ -44,7 +43,7 @@ class Storage(object):
 
 
 class Test(TestCase):
-    def test_dsu(self):
+    def test_merging_tables(self):
         tests = [
             # samples
             test([1, 1, 1, 1, 1], [

@@ -1,9 +1,8 @@
 # python3
 
 from collections import namedtuple
-from unittest import TestCase
-
 from typing import List
+from unittest import TestCase
 
 swap = namedtuple('swap', 'i j')
 test = namedtuple('test', 'data expected')
@@ -33,7 +32,7 @@ def sift_down(i: int, data: List[int]) -> List[swap]:
 
 
 class Test(TestCase):
-    def test_build_heap(self):
+    def test_make_heap(self):
         tests = [
             # samples
             test([5, 4, 3, 2, 1], [swap(1, 4), swap(0, 1), swap(1, 3)]),

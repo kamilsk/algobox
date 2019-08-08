@@ -1,15 +1,14 @@
 # python3
 
 from collections import namedtuple
-from unittest import TestCase
-
 from typing import List, Optional
+from unittest import TestCase
 
 thread = namedtuple('thread', 'id start_at')
 test = namedtuple('test', 'threads jobs expected')
 
 
-class Scheduler(object):
+class Scheduler:
     def __init__(self, threads: int):
         self._threads = [thread(i, 0) for i in range(threads)]
 
@@ -75,7 +74,7 @@ class Scheduler(object):
 
 
 class Test(TestCase):
-    def test_scheduler(self):
+    def test_job_queue(self):
         tests = [
             # samples
             test(2, [1, 2, 3, 4, 5], [thread(0, 0), thread(1, 0), thread(0, 1), thread(1, 2), thread(0, 4)]),

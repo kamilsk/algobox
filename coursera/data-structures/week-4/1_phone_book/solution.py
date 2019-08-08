@@ -1,17 +1,16 @@
 # python3
 
 from collections import namedtuple
-from unittest import TestCase
-
 from random import randint
 from typing import Any, Callable, List, Optional
+from unittest import TestCase
 
 contact = namedtuple('contact', 'phone name')
 test = namedtuple('test', 'commands expected')
 
 
 class Node:
-    def __init__(self, value):
+    def __init__(self, value: Any):
         self.next = self.prev = None
         self.value = value
 
@@ -21,7 +20,7 @@ class LinkedList:
         self.head = self.tail = None
         self.compare = compare
 
-    def add(self, value):
+    def add(self, value: Any):
         if self.tail is None:
             self.head = self.tail = Node(value)
             return
@@ -33,7 +32,7 @@ class LinkedList:
             return
         found.value = value
 
-    def remove(self, value):
+    def remove(self, value: Any):
         found = self.find(value)
         if found is None:
             return
@@ -51,7 +50,7 @@ class LinkedList:
             return
         p.next, n.prev = n, p
 
-    def find(self, value) -> Optional[Node]:
+    def find(self, value: Any) -> Optional[Node]:
         if self.head is None:
             return None
         found = self.head
@@ -79,16 +78,13 @@ class PhoneBook:
     def __init__(self):
         cardinality = 10 ** 7 // 10 ** 4
         self.__hash = self.__universal_family(cardinality)
-        self.__storage: List[Optional[LinkedList]] = [None] * cardinality
+        self.__storage = [LinkedList(lambda x, y: x.phone == y.phone) for _ in range(cardinality)]
 
     def process(self, queries: List[str]) -> List[str]:
         result = []
 
         for query in [Query(query.split()) for query in queries]:
-            h = self.__hash(query.phone)
-            if self.__storage[h] is None:
-                self.__storage[h] = LinkedList(lambda x, y: x.phone == y.phone)
-            ll = self.__storage[h]
+            ll = self.__storage[self.__hash(query.phone)]
 
             if query.type == 'add':
                 ll.add(contact(query.phone, query.name))
