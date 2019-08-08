@@ -27,8 +27,7 @@ class Buffer:
         if len(self.queue) == self.queue.maxlen:
             return response(True, -1)
 
-        last = self.queue.pop()
-        self.queue.append(last)
+        last = self.queue[-1]
         self.queue.append(last + req.time_to_process)
         return response(False, last)
 
