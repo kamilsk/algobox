@@ -46,4 +46,5 @@ and competence. So, I do not recommend to use the solutions presented here as a 
 ## 💁‍♂️ Useful
 
 - [Algojammer](https://github.com/ChrisKnott/Algojammer)
+- [Animated algorithms and data structures](https://www.chrislaux.com)
 - [Sorting Algorithms Animations](https://www.toptal.com/developers/sorting-algorithms)
