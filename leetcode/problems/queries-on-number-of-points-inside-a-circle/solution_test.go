@@ -28,7 +28,8 @@ func TestCountPoints(t *testing.T) {
 	for i, test := range tests {
 		obtained := countPoints(test.points, test.queries)
 		if !reflect.DeepEqual(obtained, test.expected) {
-			t.Errorf("expected: %v, obtained: %v (case %d)", test.expected, obtained, i)
+			t.Errorf("expected: %v, obtained: %v (case %d)",
+				test.expected, obtained, i)
 		}
 	}
 }
@@ -36,7 +37,6 @@ func TestCountPoints(t *testing.T) {
 // n^2
 func countPoints(points, queries [][]int) []int {
 	result := make([]int, len(queries))
-
 	for i, query := range queries {
 		x0, y0, r := query[0], query[1], float64(query[2])
 
@@ -49,6 +49,5 @@ func countPoints(points, queries [][]int) []int {
 			}
 		}
 	}
-
 	return result
 }

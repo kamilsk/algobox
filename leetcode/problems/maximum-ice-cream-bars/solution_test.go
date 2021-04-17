@@ -18,8 +18,10 @@ func TestMaxIceCream(t *testing.T) {
 	}
 
 	for i, test := range tests {
-		if obtained := maxIceCream(test.costs, test.coins); obtained != test.expected {
-			t.Errorf("expected: %d, obtained: %d (case %d)", test.expected, obtained, i)
+		obtained := maxIceCream(test.costs, test.coins)
+		if obtained != test.expected {
+			t.Errorf("expected: %d, obtained: %d (case %d)",
+				test.expected, obtained, i)
 		}
 	}
 }

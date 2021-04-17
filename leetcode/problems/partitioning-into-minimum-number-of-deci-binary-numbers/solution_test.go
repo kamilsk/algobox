@@ -18,7 +18,8 @@ func TestMinPartitions(t *testing.T) {
 
 	for i, test := range tests {
 		if obtained := minPartitions(test.n); obtained != test.expected {
-			t.Errorf("expected: %d, obtained: %d (case %d)", test.expected, obtained, i)
+			t.Errorf("expected: %d, obtained: %d (case %d)",
+				test.expected, obtained, i)
 		}
 	}
 }
