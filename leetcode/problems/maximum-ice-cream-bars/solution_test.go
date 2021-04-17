@@ -24,6 +24,7 @@ func TestMaxIceCream(t *testing.T) {
 	}
 }
 
+// n*log(n)
 func maxIceCream(costs []int, coins int) int {
 	sort.Ints(costs)
 
