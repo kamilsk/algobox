@@ -16,7 +16,8 @@ func TestContainsNearbyAlmostDuplicate(t *testing.T) {
 		{[]int{1, 2, 1, 1}, 1, 0, true},
 		{[]int{1, 2, 5, 6, 7, 2, 4}, 4, 0, true},
 		{[]int{7, 1, 3}, 2, 3, true},
-		{[]int{2147483647, -1, 2147483647}, 1, 2147483647, false}, // bucket fails
+		{[]int{2147483647, -1, 2147483647}, 1, 2147483647, false},
+		{[]int{-2147483648, 2147483647}, 1, 1, false},
 	}
 
 	for i, test := range tests {
@@ -30,6 +31,10 @@ func TestContainsNearbyAlmostDuplicate(t *testing.T) {
 
 // naive - n*k, bucket - n
 func containsNearbyAlmostDuplicate(nums []int, k int, t int) bool {
+	if len(nums) < 2 || k < 0 || t < 0 {
+		return false
+	}
+
 	abs := func(num int) int {
 		if num < 0 {
 			return -num
@@ -38,13 +43,13 @@ func containsNearbyAlmostDuplicate(nums []int, k int, t int) bool {
 	}
 
 	naive := func(nums []int, k int, t int) bool {
-		for i, n := range nums {
+		for i, num := range nums {
 			window := i + k + 1
 			if window > len(nums) {
 				window = len(nums)
 			}
-			for _, m := range nums[i+1 : window] {
-				if abs(n-m) <= t {
+			for _, cmp := range nums[i+1 : window] {
+				if abs(num-cmp) <= t {
 					return true
 				}
 			}
@@ -53,26 +58,31 @@ func containsNearbyAlmostDuplicate(nums []int, k int, t int) bool {
 	}
 
 	bucket := func(nums []int, k int, t int) bool {
-		buckets := make(map[int]int)
+		buckets, width := make(map[int]int), t+1
 		for i, num := range nums {
-			b := num / (t + 1)
-			if _, has := buckets[b]; has {
+			bucket := num / width
+			if num < 0 {
+				bucket--
+			}
+
+			if _, has := buckets[bucket]; has {
 				return true
 			}
-			buckets[b] = num
-			if _, has := buckets[b-1]; has && num-buckets[b-1] <= t {
+			buckets[bucket] = num
+
+			if cmp, has := buckets[bucket-1]; has && abs(num-cmp) <= t {
 				return true
 			}
-			if _, has := buckets[b+1]; has && buckets[b+1]-num <= t {
+			if cmp, has := buckets[bucket+1]; has && abs(num-cmp) <= t {
 				return true
 			}
 			if i >= k {
-				delete(buckets, nums[i-k]/(t+1))
+				delete(buckets, nums[i-k]/width)
 			}
 		}
 		return false
 	}
 
-	_ = bucket
-	return naive(nums, k, t)
+	_, _ = naive, bucket
+	return bucket(nums, k, t)
 }
